@@ -1,0 +1,21 @@
+#include "waiter.h"
+
+void wait_init(){
+	SysTick_Config(SystemCoreClock/1000);
+}
+
+void wait(int millis){
+
+}
+
+void wait_ms(int time){
+
+}
+
+uint32_t wait_elapsed(){
+
+}
+
+void SysTick_Handler(void){
+	++__ms;
+}

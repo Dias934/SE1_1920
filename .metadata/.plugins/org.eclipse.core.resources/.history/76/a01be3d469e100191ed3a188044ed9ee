@@ -1,0 +1,13 @@
+
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+
+#define LED2_PORT LPC_GPIO0
+#define LED2_REGISTER
+
+extern void init_led2();
+extern void turn_on_led2();
+extern void turn_off_led2();

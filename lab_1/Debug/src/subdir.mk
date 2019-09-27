@@ -6,17 +6,23 @@
 C_SRCS += \
 ../src/cr_startup_lpc175x_6x.c \
 ../src/crp.c \
-../src/lab_1.c 
+../src/gpio_g1.c \
+../src/lab_1.c \
+../src/waiter.c 
 
 OBJS += \
 ./src/cr_startup_lpc175x_6x.o \
 ./src/crp.o \
-./src/lab_1.o 
+./src/gpio_g1.o \
+./src/lab_1.o \
+./src/waiter.o 
 
 C_DEPS += \
 ./src/cr_startup_lpc175x_6x.d \
 ./src/crp.d \
-./src/lab_1.d 
+./src/gpio_g1.d \
+./src/lab_1.d \
+./src/waiter.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

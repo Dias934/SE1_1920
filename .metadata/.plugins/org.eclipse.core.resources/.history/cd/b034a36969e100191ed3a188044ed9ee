@@ -1,0 +1,9 @@
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+
+void init_led2();
+void turn_on_led2();
+void turn_off_led2();

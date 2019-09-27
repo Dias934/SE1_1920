@@ -1,0 +1,33 @@
+/*
+===============================================================================
+ Name        : lab_1.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+
+#include <stdio.h>
+
+// TODO: insert other include files here
+
+// TODO: insert other definitions and declarations here
+
+int main(void) {
+
+    //printf("Hello World\n");
+
+    // Force the counter to be placed into memory
+    // Enter an infinite loop, just incrementing a counter
+    while(1) {
+    	LPC_GPIO0->FIOSET=(1<<22);
+    }
+    return 0 ;
+}
