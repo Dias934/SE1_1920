@@ -5,12 +5,16 @@
 			<provider id="com.crt.advproject.GCCBuildCommandParser">
 				<language id="org.eclipse.cdt.core.gcc">
 					<resource project-relative-path="src/waiter.c">
+						<entry kind="includePath" name="/SE1920/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
+						<entry kind="includeFile" name="D:/Isel/19-20/Inverno/SE1/SE1920/inc"/>
 						<entry kind="macro" name="CORE_M3" value="1"/>
 						<entry kind="macro" name="DEBUG" value="1"/>
 						<entry kind="macro" name="__CODE_RED" value="1"/>
@@ -23,6 +27,9 @@
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/SE1920/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
 						<entry kind="macro" name="CORE_M3" value="1"/>
@@ -39,6 +46,9 @@
 						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
+						<entry kind="includePath" name="/SE1920/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="macro" name="CORE_M3" value="1"/>
 						<entry kind="macro" name="DEBUG" value="1"/>
 						<entry kind="macro" name="__CODE_RED" value="1"/>
@@ -47,12 +57,16 @@
 						<entry kind="macro" name="__USE_CMSIS" value="CMSIS_CORE_LPC17xx"/>
 					</resource>
 					<resource project-relative-path="src/gpio_g1.c">
+						<entry kind="includePath" name="/SE1920/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
 						<entry kind="includePath" name="/${ProjName}/inc">
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
+						<entry kind="includeFile" name="D:/Isel/19-20/Inverno/SE1/SE1920/inc"/>
 						<entry kind="macro" name="CORE_M3" value="1"/>
 						<entry kind="macro" name="DEBUG" value="1"/>
 						<entry kind="macro" name="__CODE_RED" value="1"/>
@@ -65,6 +79,9 @@
 							<flag value="VALUE_WORKSPACE_PATH"/>
 						</entry>
 						<entry kind="includePath" name="/CMSIS_CORE_LPC17xx/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/SE1920/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
 						<entry kind="macro" name="CORE_M3" value="1"/>

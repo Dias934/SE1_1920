@@ -1,8 +1,0 @@
-core_cm3.h:1405:22:NVIC_SetPriority	16	static
-core_cm3.h:1532:26:SysTick_Config	16	static
-waiter.c:6:6:wait_init	8	static
-waiter.c:10:6:wait	24	static
-waiter.c:15:6:wait_hz	32	static
-waiter.c:20:6:wait_ms	16	static
-waiter.c:24:10:wait_elapsed	4	static
-waiter.c:28:6:SysTick_Handler	4	static

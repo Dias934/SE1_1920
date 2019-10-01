@@ -1,3 +1,0 @@
-gpio_g1.c:4:6:init_led2	4	static
-gpio_g1.c:8:6:turn_on_led2	4	static
-gpio_g1.c:12:6:turn_off_led2	4	static

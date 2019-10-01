@@ -23,25 +23,25 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: SE1920.axf
+all: libSE1920.a
 
 # Tool invocations
-SE1920.axf: $(OBJS) $(USER_OBJS)
+libSE1920.a: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="SE1920.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "SE1920_Debug.ld" -o "SE1920.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@echo 'Invoking: MCU Archiver'
+	arm-none-eabi-ar -r  "libSE1920.a" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) SE1920.axf
+	-$(RM) $(OBJS)$(ARCHIVES)$(C_DEPS) libSE1920.a
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size "SE1920.axf"; # arm-none-eabi-objcopy -v -O binary "SE1920.axf" "SE1920.bin" ; # checksum -p LPC1769 -d "SE1920.bin";
+	-arm-none-eabi-size "libSE1920.a" ; # arm-none-eabi-objdump -h -S "libSE1920.a" >"libSE1920.lss"
 	-@echo ' '
 
 .PHONY: all clean dependents post-build

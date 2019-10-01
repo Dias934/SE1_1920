@@ -1,71 +1,19 @@
-22:10:28 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+16:58:23 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-22:10:28 **** Incremental Build of configuration Debug for project lab_1 ****
-make -r -j8 all 
-Building file: ../src/waiter.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\lab_1\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/waiter.d" -MT"src/waiter.o" -MT"src/waiter.d" -o "src/waiter.o" "../src/waiter.c"
-Finished building: ../src/waiter.c
- 
-Building target: lab_1.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="lab_1.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab_1_Debug.ld" -o "lab_1.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/gpio_g1.o ./src/lab_1.o ./src/waiter.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:        3580 B       512 KB      0.68%
-        RamLoc32:         492 B        32 KB      1.50%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: lab_1.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "lab_1.axf"; # arm-none-eabi-objcopy -v -O binary "lab_1.axf" "lab_1.bin" ; # checksum -p LPC1769 -d "lab_1.bin";
-   text	   data	    bss	    dec	    hex	filename
-   3576	      4	    488	   4068	    fe4	lab_1.axf
- 
-22:10:37 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for 'all'.
-22:10:37 **** Incremental Build of configuration Debug for project lab_1 ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-22:10:39 **** Incremental Build of configuration Debug for project lab_1 ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-22:10:56 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for 'all'.
-22:10:57 **** Incremental Build of configuration Debug for project lab_1 ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-22:10:58 **** Incremental Build of configuration Debug for project lab_1 ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-22:11:21 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for 'all'.
-22:11:21 **** Incremental Build of configuration Debug for project lab_1 ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-22:11:22 **** Incremental Build of configuration Debug for project lab_1 ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-22:11:59 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for 'all'.
-22:12:00 **** Incremental Build of configuration Debug for project lab_1 ****
+16:58:23 **** Incremental Build of configuration Debug for project lab_1 ****
 make -r -j8 all 
 Building file: ../src/lab_1.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\lab_1\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lab_1.d" -MT"src/lab_1.o" -MT"src/lab_1.d" -o "src/lab_1.o" "../src/lab_1.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\lab_1\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lab_1.d" -MT"src/lab_1.o" -MT"src/lab_1.d" -o "src/lab_1.o" "../src/lab_1.c"
 Finished building: ../src/lab_1.c
  
 Building target: lab_1.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="lab_1.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab_1_Debug.ld" -o "lab_1.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/gpio_g1.o ./src/lab_1.o ./src/waiter.o   -lCMSIS_CORE_LPC17xx
+arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -L"D:\Isel\19-20\Inverno\SE1\SE1920\Debug" -Xlinker -Map="lab_1.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab_1_Debug.ld" -o "lab_1.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/lab_1.o   -lCMSIS_CORE_LPC17xx -lSE1920
 Memory region         Used Size  Region Size  %age Used
-       MFlash512:        3580 B       512 KB      0.68%
-        RamLoc32:         492 B        32 KB      1.50%
+       MFlash512:        2804 B       512 KB      0.53%
+        RamLoc32:         496 B        32 KB      1.51%
         RamAHB32:          0 GB        32 KB      0.00%
 Finished building target: lab_1.axf
  
@@ -73,49 +21,14 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "lab_1.axf"; # arm-none-eabi-objcopy -v -O binary "lab_1.axf" "lab_1.bin" ; # checksum -p LPC1769 -d "lab_1.bin";
    text	   data	    bss	    dec	    hex	filename
-   3576	      4	    488	   4068	    fe4	lab_1.axf
+   2800	      4	    492	   3296	    ce0	lab_1.axf
  
-22:12:08 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+16:58:38 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-22:12:08 **** Incremental Build of configuration Debug for project lab_1 ****
+16:58:38 **** Incremental Build of configuration Debug for project lab_1 ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-22:12:10 **** Incremental Build of configuration Debug for project lab_1 ****
+16:58:39 **** Incremental Build of configuration Debug for project lab_1 ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-23:34:03 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for 'all'.
-23:34:04 **** Incremental Build of configuration Debug for project lab_1 ****
-make -r -j8 all 
-Building file: ../src/gpio_g1.c
-Building file: ../src/lab_1.c
-Building file: ../src/waiter.c
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\lab_1\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/gpio_g1.d" -MT"src/gpio_g1.o" -MT"src/gpio_g1.d" -o "src/gpio_g1.o" "../src/gpio_g1.c"
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\lab_1\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lab_1.d" -MT"src/lab_1.o" -MT"src/lab_1.d" -o "src/lab_1.o" "../src/lab_1.c"
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\lab_1\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/waiter.d" -MT"src/waiter.o" -MT"src/waiter.d" -o "src/waiter.o" "../src/waiter.c"
-Finished building: ../src/gpio_g1.c
- 
-Finished building: ../src/lab_1.c
-Finished building: ../src/waiter.c
- 
- 
-Building target: lab_1.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -Xlinker -Map="lab_1.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab_1_Debug.ld" -o "lab_1.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/gpio_g1.o ./src/lab_1.o ./src/waiter.o   -lCMSIS_CORE_LPC17xx
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:        3580 B       512 KB      0.68%
-        RamLoc32:         492 B        32 KB      1.50%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: lab_1.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "lab_1.axf"; # arm-none-eabi-objcopy -v -O binary "lab_1.axf" "lab_1.bin" ; # checksum -p LPC1769 -d "lab_1.bin";
-   text	   data	    bss	    dec	    hex	filename
-   3576	      4	    488	   4068	    fe4	lab_1.axf
- 
