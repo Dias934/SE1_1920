@@ -11,4 +11,5 @@
 void init_ui(void){
 	init_led();
 	wait_init();
+	BUTTON_Init();
 }

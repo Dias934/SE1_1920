@@ -10,16 +10,17 @@
 int led_state=0;
 
 void init_led(){
-	LPC_GPIO0->FIODIR|=(1<<22);
+	LPC_GPIO0->FIODIR|=(1<<LED_PIN);
+	turn_off_led();
 }
 
 void turn_on_led(){
-	LPC_GPIO0->FIOSET=(1<<22);
+	LPC_GPIO0->FIOSET=(1<<LED_PIN);
 	led_state=1;
 }
 
 void turn_off_led(){
-	LPC_GPIO0->FIOCLR=(1<<22);
+	LPC_GPIO0->FIOCLR=(1<<LED_PIN);
 	led_state=0;
 }
 
