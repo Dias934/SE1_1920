@@ -91,6 +91,18 @@
 #define RELEASED 2
 
 /**
+ *  @brief	Position of Up Button on BUTTON_GetButtonsEvents bitmap
+*/
+#define UP_BUTTON_POSITION 0
+/**
+ *  @brief	Position of Down Button on BUTTON_GetButtonsEvents bitmap
+*/
+#define DOWN_BUTTON_POSITION 2
+/**
+ *  @brief	Position of Enter Button on BUTTON_GetButtonsEvents bitmap
+*/
+#define ENTER_BUTTON_POSITION 4
+/**
  * @}
  */
 
@@ -105,19 +117,6 @@ typedef struct{
 	short down;
 	short enter;
 }BUTTONS_STATE_TYPEDEF;
-/**
- * @}
- */
-
-/** @defgroup BUTTON_Public_Variables Button Public Variables
- * @{
-*/
-
-/**
- * @brief representation of the buttons state
- */
-extern BUTTONS_STATE_TYPEDEF buttons_state;
-
 /**
  * @}
  */
@@ -145,7 +144,7 @@ int BUTTON_Read(void);
 
 /**
  * @brief	Check if there is any change at the buttons state
- * @return	Bitmap code.
+ * @return	Bitmap code. 0:1-> up button state, 2:3 -> down button state, 4:5 -> enter button state
  */
 int BUTTON_GetButtonsEvents(void);
 

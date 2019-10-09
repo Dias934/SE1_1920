@@ -1,4 +1,4 @@
-17:39:58 **** Incremental Build of configuration Debug for project SE1920 ****
+18:18:24 **** Incremental Build of configuration Debug for project SE1920 ****
 make -r all 
 Building file: ../src/button.c
 Invoking: MCU C Compiler
@@ -26,5 +26,5 @@ arm-none-eabi-size "libSE1920.a" ; # arm-none-eabi-objdump -h -S "libSE1920.a" >
     396	      0	      4	    400	    190	wait.o (ex libSE1920.a)
  
 
-17:40:02 Build Finished. 0 errors, 0 warnings. (took 3s.685ms)
+18:18:25 Build Finished. 0 errors, 0 warnings. (took 1s.193ms)
 

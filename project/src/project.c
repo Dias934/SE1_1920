@@ -14,7 +14,9 @@
 
 #include <cr_section_macros.h>
 
-#include <stdio.h>
+#include "ui.h"
+#include "menu.h"
+#include "data_storage.h"
 
 // TODO: insert other include files here
 
@@ -22,13 +24,12 @@
 
 int main(void) {
 
-    printf("Hello World\n");
-
-    // Force the counter to be placed into memory
-    volatile static int i = 0 ;
-    // Enter an infinite loop, just incrementing a counter
+	init_ui();
+	init_data_st(0);
+	set_Date(9,10,2019);
+	uint32_t *(*menu_execute)()=init_menu();
     while(1) {
-        i++ ;
+    	menu_execute=menu_execute();
     }
     return 0 ;
 }

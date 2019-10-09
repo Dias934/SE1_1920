@@ -1,34 +1,59 @@
-18:18:46 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+19:08:52 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-18:18:46 **** Incremental Build of configuration Debug for project lab_2 ****
+19:08:52 **** Incremental Build of configuration Debug for project project ****
 make -r -j8 all 
-Building file: ../src/lab_2.c
+Building file: ../src/menu_maintenance.c
+Building file: ../src/menu_normal.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\lab_2\inc" -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lab_2.d" -MT"src/lab_2.o" -MT"src/lab_2.d" -o "src/lab_2.o" "../src/lab_2.c"
-Finished building: ../src/lab_2.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\project\inc" -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/menu_maintenance.d" -MT"src/menu_maintenance.o" -MT"src/menu_maintenance.d" -o "src/menu_maintenance.o" "../src/menu_maintenance.c"
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\project\inc" -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/menu_normal.d" -MT"src/menu_normal.o" -MT"src/menu_normal.d" -o "src/menu_normal.o" "../src/menu_normal.c"
+../src/menu_normal.c: In function 'normal_execution':
+../src/menu_normal.c:27:11: warning: returning 'uint32_t * (*)()' {aka 'unsigned int * (*)()'} from a function with incompatible return type 'uint32_t *' {aka 'unsigned int *'} [-Wincompatible-pointer-types]
+    return &maintenance_execution;
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/menu_normal.c:34:9: warning: returning 'uint32_t * (*)()' {aka 'unsigned int * (*)()'} from a function with incompatible return type 'uint32_t *' {aka 'unsigned int *'} [-Wincompatible-pointer-types]
+  return &normal_execution;
+         ^~~~~~~~~~~~~~~~~
+../src/menu_maintenance.c: In function 'maintenance_execution':
+../src/menu_maintenance.c:27:11: warning: returning 'uint32_t * (*)()' {aka 'unsigned int * (*)()'} from a function with incompatible return type 'uint32_t *' {aka 'unsigned int *'} [-Wincompatible-pointer-types]
+    return &normal_execution;
+           ^~~~~~~~~~~~~~~~~
+../src/menu_maintenance.c:35:10: warning: returning 'uint32_t * (*)()' {aka 'unsigned int * (*)()'} from a function with incompatible return type 'uint32_t *' {aka 'unsigned int *'} [-Wincompatible-pointer-types]
+   return &maintenance_execution; //change this to menu_change_field execution function later
+          ^~~~~~~~~~~~~~~~~~~~~~
+../src/menu_maintenance.c:41:11: warning: returning 'uint32_t * (*)()' {aka 'unsigned int * (*)()'} from a function with incompatible return type 'uint32_t *' {aka 'unsigned int *'} [-Wincompatible-pointer-types]
+    return &normal_execution;
+           ^~~~~~~~~~~~~~~~~
+../src/menu_maintenance.c:45:9: warning: returning 'uint32_t * (*)()' {aka 'unsigned int * (*)()'} from a function with incompatible return type 'uint32_t *' {aka 'unsigned int *'} [-Wincompatible-pointer-types]
+  return &maintenance_execution;
+         ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/menu_normal.c
+Finished building: ../src/menu_maintenance.c
  
-Building target: lab_2.axf
+ 
+Building target: project.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -L"D:\Isel\19-20\Inverno\SE1\SE1920\Debug" -Xlinker -Map="lab_2.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab_2_Debug.ld" -o "lab_2.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/lab_2.o   -lCMSIS_CORE_LPC17xx -lSE1920
+arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -L"D:\Isel\19-20\Inverno\SE1\SE1920\Debug" -Xlinker -Map="project.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "project_Debug.ld" -o "project.axf"  ./src/calendar.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/data_storage.o ./src/menu.o ./src/menu_maintenance.o ./src/menu_normal.o ./src/project.o   -lCMSIS_CORE_LPC17xx -lSE1920
 Memory region         Used Size  Region Size  %age Used
-       MFlash512:        3352 B       512 KB      0.64%
-        RamLoc32:         504 B        32 KB      1.54%
+       MFlash512:        4160 B       512 KB      0.79%
+        RamLoc32:         524 B        32 KB      1.60%
         RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: lab_2.axf
+Finished building target: project.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "lab_2.axf"; # arm-none-eabi-objcopy -v -O binary "lab_2.axf" "lab_2.bin" ; # checksum -p LPC1769 -d "lab_2.bin";
+arm-none-eabi-size "project.axf"; # arm-none-eabi-objcopy -v -O binary "project.axf" "project.bin" ; # checksum -p LPC1769 -d "project.bin";
    text	   data	    bss	    dec	    hex	filename
-   3348	      4	    500	   3852	    f0c	lab_2.axf
+   4156	      4	    520	   4680	   1248	project.axf
  
-18:19:01 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+19:09:18 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-18:19:01 **** Incremental Build of configuration Debug for project lab_2 ****
+19:09:18 **** Incremental Build of configuration Debug for project project ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-18:19:03 **** Incremental Build of configuration Debug for project lab_2 ****
+19:09:20 **** Incremental Build of configuration Debug for project project ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.

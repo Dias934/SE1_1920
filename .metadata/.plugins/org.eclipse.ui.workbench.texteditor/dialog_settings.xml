@@ -2,12 +2,17 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="LPC_PINCON_TypeDef" key="selection"/>
+		<item value="button_map" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="b_map"/>
+			<item value="count_10"/>
+			<item value="count_2"/>
+			<item value="button_map"/>
+			<item value="IRQn_Type"/>
 			<item value="LPC_PINCON_TypeDef"/>
 			<item value="PINSEL"/>
 			<item value="FIO"/>
@@ -18,13 +23,12 @@
 			<item value="LPC_PIN"/>
 			<item value="lpc_gpio0"/>
 			<item value="LPC_PINCON"/>
-			<item value="PINMODE0"/>
-			<item value="LPC_GPIO0"/>
-			<item value="P0"/>
-			<item value="PIN"/>
-			<item value="SysTick"/>
 		</list>
 		<list key="replacehistory">
+			<item value="button_map"/>
+			<item value="count_10s"/>
+			<item value="count_2s"/>
+			<item value="b_map"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
