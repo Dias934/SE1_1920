@@ -1,6 +1,24 @@
 //org.eclipse.ui.commands/state/com.nxp.mcuxpresso.power.ui.setProbeType/org.eclipse.ui.commands.radioState=nopower
 //org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
 //org.eclipse.ui.commands/state/org.eclipse.wst.xml.views.XPathView.processor.xpathprocessor/org.eclipse.ui.commands.radioState=xpath10
+CONTENT_ASSIST_FOREGROUND_COLOR=192,192,192
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.cdt.ui.presentation\tTorg.eclipse.cdt.ui.CEditor.presentation\tTorg.eclipse.debug.ui.presentation\tTorg.eclipse.egit.ui.GitTheme\tTorg.eclipse.jdt.ui.presentation\tTcom.nxp.swtools.utils.themeMainCategory\tTcom.nxp.swtools.clocks.themeClocksCategory\tTcom.nxp.mcuxpresso.debug.peripheral.colors\tTcom.nxp.mcuxpresso.svd.colors\tTorg.eclipse.wst.sse.ui\tTorg.eclipse.compare.contentmergeviewer.TextMergeViewer\tTorg.eclipse.ui.presentation.default
+ColorsAndFontsPreferencePage.selectedElement=Ccom.nxp.mcuxpresso.debug.peripheral.colors.readonly
 ENABLED_DECORATORS=org.eclipse.ui.LinkedResourceDecorator\:true,org.eclipse.ui.SymlinkDecorator\:true,org.eclipse.ui.VirtualResourceDecorator\:true,org.eclipse.ui.ContentTypeDecorator\:true,org.eclipse.ui.ResourceFilterDecorator\:false,org.eclipse.debug.ui.prototype.decorator\:true,org.eclipse.cdt.ui.indexedFiles\:false,org.eclipse.cdt.managedbuilder.ui.excludedFile\:true,org.eclipse.cdt.managedbuilder.ui.includeFolder\:true,org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator\:false,org.eclipse.team.cvs.ui.decorator\:false,eclox.core.decorator\:true,com.crt.advproject.gui.CRTCustomBuildSettingsDecorator\:true,org.eclipse.jdt.ui.override.decorator\:true,org.eclipse.jdt.ui.interface.decorator\:true,org.eclipse.jdt.ui.buildpath.decorator\:true,org.eclipse.jdt.internal.ui.without.test.code.decorator\:true,com.nxp.mcuxpresso.core.datamodels.sdkNatureDecorator\:true,com.crt.dsfdebug.decorator\:true,org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator\:true,org.eclipse.egit.ui.internal.repository.RepositoryTreeNodeDecorator\:true,com.nxp.mcuxpresso.addons.docsupport.ui.decorators.projectdecorator\:true,
+OUTGOING_COLOR=192,192,192
 UIActivities.org.eclipse.cdt.debug.dsfgdbActivity=true
+com.nxp.mcuxpresso.debug.peripheral.colors.back=192,192,192
+com.nxp.mcuxpresso.debug.peripheral.colors.readonly=192,192,192
+com.nxp.mcuxpresso.svd.colors.back=192,192,192
+com.nxp.mcuxpresso.svd.colors.readonly=192,192,192
+com.nxp.swtools.utils.disabled_BG=192,192,192
 eclipse.preferences.version=1
+org.eclipse.e4.ui.css.theme.e4_dark_macosx.org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR=192,192,192
+org.eclipse.e4.ui.css.theme.e4_dark_macosx.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR=192,192,192
+org.eclipse.e4.ui.css.theme.e4_dark_macosx.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR=192,192,192
+org.eclipse.e4.ui.css.theme.e4_dark_macosx.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR=192,192,192
+org.eclipse.egit.ui.DiffHeadlineForegroundColor=192,192,192
+org.eclipse.team.cvs.ui.fontsandcolors.ignored_resource_background_color=192,192,192
+org.eclipse.team.cvs.ui.fontsandcolors.outgoing_change_background_color=192,192,192
+org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands/>
+org.eclipse.ui.workbench.INFORMATION_FOREGROUND=192,192,192

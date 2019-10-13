@@ -2,12 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="button_map" key="selection"/>
+		<item value="FIODIR" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="LCDText_Write_4bits"/>
+			<item value="FIO1DIR"/>
+			<item value="LPC_SC_TypeDef"/>
+			<item value="pclksel"/>
+			<item value="MCR"/>
+			<item value="MR0"/>
+			<item value="ctcr"/>
 			<item value="b_map"/>
 			<item value="count_10"/>
 			<item value="count_2"/>
@@ -16,13 +23,6 @@
 			<item value="LPC_PINCON_TypeDef"/>
 			<item value="PINSEL"/>
 			<item value="FIO"/>
-			<item value="read"/>
-			<item value="FIOPIN"/>
-			<item value="PINMODE"/>
-			<item value="PIN_MODE0"/>
-			<item value="LPC_PIN"/>
-			<item value="lpc_gpio0"/>
-			<item value="LPC_PINCON"/>
 		</list>
 		<list key="replacehistory">
 			<item value="button_map"/>

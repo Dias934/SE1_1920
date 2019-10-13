@@ -1,12 +1,15 @@
 var searchData=
 [
-  ['wait_50',['Wait',['../group__WAIT.html',1,'']]],
-  ['wait_2ec_51',['wait.c',['../wait_8c.html',1,'']]],
-  ['wait_2eh_52',['wait.h',['../wait_8h.html',1,'']]],
-  ['wait_5felapsed_53',['wait_elapsed',['../group__WAIT__Public__Functions.html#ga6aba57e8c6adc44c4fa736b81c6172d6',1,'wait_elapsed(uint32_t time):&#160;wait.c'],['../group__WAIT__Public__Functions.html#ga6aba57e8c6adc44c4fa736b81c6172d6',1,'wait_elapsed(uint32_t time):&#160;wait.c']]],
-  ['wait_5fhz_54',['wait_hz',['../group__WAIT__Public__Functions.html#gaa5a09fcb9ecde4bd312afa65b29f3cb5',1,'wait_hz(int frequency):&#160;wait.c'],['../group__WAIT__Public__Functions.html#gaa5a09fcb9ecde4bd312afa65b29f3cb5',1,'wait_hz(int frequency):&#160;wait.c']]],
-  ['wait_5finit_55',['wait_init',['../group__WAIT__Public__Functions.html#ga91ab42e591fe0f4c154db3af35039b27',1,'wait_init():&#160;wait.c'],['../group__WAIT__Public__Functions.html#ga91ab42e591fe0f4c154db3af35039b27',1,'wait_init(void):&#160;wait.c']]],
-  ['wait_5fms_56',['wait_ms',['../group__WAIT__Public__Functions.html#gae24701791bd24efb4ace4d801af16101',1,'wait_ms(int millis):&#160;wait.c'],['../group__WAIT__Public__Functions.html#gae24701791bd24efb4ace4d801af16101',1,'wait_ms(int millis):&#160;wait.c']]],
-  ['wait_20public_20functions_57',['Wait Public Functions',['../group__WAIT__Public__Functions.html',1,'']]],
-  ['wait_20public_20variables_58',['Wait Public Variables',['../group__WAIT__Public__Variables.html',1,'']]]
+  ['pincfg_5fdb4_103',['PINCFG_DB4',['../lcd_8h.html#a5d50d2f0d93e87195de34c11c909dfed',1,'lcd.h']]],
+  ['pincfg_5fdb5_104',['PINCFG_DB5',['../lcd_8h.html#ac37d522652c13c4b214d4e1b2ff6b6ec',1,'lcd.h']]],
+  ['pincfg_5fdb6_105',['PINCFG_DB6',['../lcd_8h.html#afc1722c654b99ba468b59ad515500236',1,'lcd.h']]],
+  ['pincfg_5fdb7_106',['PINCFG_DB7',['../lcd_8h.html#acd41d0326af10bb3645da7ac4698063c',1,'lcd.h']]],
+  ['pincfg_5fdown_5fbutton_107',['PINCFG_DOWN_BUTTON',['../group__BUTTON__Public__Constants.html#ga7d9db4e1b0e01084726e76921daffc8e',1,'button.h']]],
+  ['pincfg_5fenable_108',['PINCFG_ENABLE',['../lcd_8h.html#affff21d3808ff51555ab85d588b1e2fe',1,'lcd.h']]],
+  ['pincfg_5fenter_5fbutton_109',['PINCFG_ENTER_BUTTON',['../group__BUTTON__Public__Constants.html#ga25fbd93b9b7b689face5e729ce99a9b7',1,'button.h']]],
+  ['pincfg_5fpullup_110',['PINCFG_PULLUP',['../group__BUTTON__Public__Constants.html#ga513e33008e70140752f71ba47703853e',1,'button.h']]],
+  ['pincfg_5frs_111',['PINCFG_RS',['../lcd_8h.html#ab1b372492787ca49830c5b0162ad6465',1,'lcd.h']]],
+  ['pincfg_5fup_5fbutton_112',['PINCFG_UP_BUTTON',['../group__BUTTON__Public__Constants.html#ga4273ece5fedf4131d5475a521cf4d424',1,'button.h']]],
+  ['pressed_113',['PRESSED',['../group__BUTTON__Public__Constants.html#ga654adff3c664f27f0b29c24af818dd26',1,'button.h']]],
+  ['pressing_114',['PRESSING',['../group__BUTTON__Public__Constants.html#ga4767bac37b4794d46b89bb41c25576a8',1,'button.h']]]
 ];

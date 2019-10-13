@@ -5,18 +5,21 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/button.c \
+../src/lcd.c \
 ../src/led.c \
 ../src/ui.c \
 ../src/wait.c 
 
 OBJS += \
 ./src/button.o \
+./src/lcd.o \
 ./src/led.o \
 ./src/ui.o \
 ./src/wait.o 
 
 C_DEPS += \
 ./src/button.d \
+./src/lcd.d \
 ./src/led.d \
 ./src/ui.d \
 ./src/wait.d 

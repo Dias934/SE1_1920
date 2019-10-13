@@ -1,18 +1,13 @@
-18:18:24 **** Incremental Build of configuration Debug for project SE1920 ****
+01:51:26 **** Incremental Build of configuration Debug for project SE1920 ****
 make -r all 
-Building file: ../src/button.c
+Building file: ../src/lcd.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/button.d" -MT"src/button.o" -MT"src/button.d" -o "src/button.o" "../src/button.c"
-Finished building: ../src/button.c
- 
-Building file: ../src/ui.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/ui.d" -MT"src/ui.o" -MT"src/ui.d" -o "src/ui.o" "../src/ui.c"
-Finished building: ../src/ui.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/lcd.d" -MT"src/lcd.o" -MT"src/lcd.d" -o "src/lcd.o" "../src/lcd.c"
+Finished building: ../src/lcd.c
  
 Building target: libSE1920.a
 Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libSE1920.a"  ./src/button.o ./src/led.o ./src/ui.o ./src/wait.o   
+arm-none-eabi-ar -r  "libSE1920.a"  ./src/button.o ./src/lcd.o ./src/led.o ./src/ui.o ./src/wait.o   
 arm-none-eabi-ar: creating libSE1920.a
 Finished building target: libSE1920.a
  
@@ -21,10 +16,11 @@ Performing post-build steps
 arm-none-eabi-size "libSE1920.a" ; # arm-none-eabi-objdump -h -S "libSE1920.a" >"libSE1920.lss"
    text	   data	    bss	    dec	    hex	filename
     390	      0	      6	    396	    18c	button.o (ex libSE1920.a)
+    632	      0	      0	    632	    278	lcd.o (ex libSE1920.a)
     120	      0	      4	    124	     7c	led.o (ex libSE1920.a)
-     20	      0	      0	     20	     14	ui.o (ex libSE1920.a)
-    396	      0	      4	    400	    190	wait.o (ex libSE1920.a)
+     24	      0	      0	     24	     18	ui.o (ex libSE1920.a)
+    518	      0	      4	    522	    20a	wait.o (ex libSE1920.a)
  
 
-18:18:25 Build Finished. 0 errors, 0 warnings. (took 1s.193ms)
+01:51:27 Build Finished. 0 errors, 0 warnings. (took 954ms)
 

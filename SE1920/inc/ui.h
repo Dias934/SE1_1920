@@ -13,6 +13,7 @@
 #include <wait.h>
 #include <led.h>
 #include <button.h>
+#include <lcd.h>
 
 /** @defgroup UI UI
  * This package provides the User Interface contact with the hardware.

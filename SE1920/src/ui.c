@@ -9,7 +9,8 @@
 
 
 void init_ui(void){
-	init_led();
 	wait_init();
+	LCDText_Init();
+	init_led();
 	BUTTON_Init();
 }
