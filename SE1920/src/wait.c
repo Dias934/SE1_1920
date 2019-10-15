@@ -35,7 +35,7 @@ uint32_t wait_elapsed(uint32_t time){
 void wait_ChronoUs(uint32_t waitUs){
 	LPC_TIM0->MR0=waitUs;
 	LPC_TIM0->TCR=1;
-	while(((LPC_TIM0->IR)&MRO_INTERRUPT)!=1);
+	while(((LPC_TIM0->IR)&MR0_INTERRUPT)!=1);
 	LPC_TIM0->TCR=(1<<RESET_STOPWATCH);
 	LPC_TIM0->IR=1;
 }

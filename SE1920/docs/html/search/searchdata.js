@@ -4,11 +4,10 @@ var indexSectionsWithContent =
   1: "b",
   2: "bhluw",
   3: "bilstw",
-  4: "_bdelu",
+  4: "_bcdelru",
   5: "bcdfinrs",
   6: "bcdefiost",
-  7: "lp",
-  8: "bcdefhilrsuw"
+  7: "bcdefhilrsuw"
 };
 
 var indexSectionNames =
@@ -20,8 +19,7 @@ var indexSectionNames =
   4: "variables",
   5: "enums",
   6: "enumvalues",
-  7: "defines",
-  8: "groups"
+  7: "groups"
 };
 
 var indexSectionLabels =
@@ -33,7 +31,6 @@ var indexSectionLabels =
   4: "Variables",
   5: "Enumerations",
   6: "Enumerator",
-  7: "Macros",
-  8: "Modules"
+  7: "Modules"
 };
 

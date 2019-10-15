@@ -21,19 +21,8 @@
 
 int main(void) {
 	init_ui();
+	LCDText_Printf("oiqerhoewrowergoqeboqerbogbweroboerboq: %d",15);
 	while (1) {
-		LCDText_WriteString("SE1");
-		wait_ms(200);
-		/*int idx=0;
-		for (short c=0; c<16; ++c) {
-			LCDText_Locate(0,c);
-			LCDText_WriteChar('A'+idx++);
-			wait_ms(500);
-			LCDText_Locate(1,c);
-			LCDText_WriteChar('A'+idx++);
-			wait_ms(500);
-		}*/
-		LCDText_Clear();
 		wait_ms(200);
 	}
 	return 0;

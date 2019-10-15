@@ -19,7 +19,7 @@ void LCDText_Init(void){
 	wait_ChronoUs(100);
 	LCDText_Send_4bits(COMMAND,INIT_VAL);
 	LCDText_Send_4bits(COMMAND,(FUNCTION_SET_CMD | FOUR_BIT<<DL_POSITION)>>4); //set datalength to 4bits write mode
-	wait_ChronoUs(100);
+	wait_ChronoUs(37);
 	LCDText_Write_4bits(COMMAND, FUNCTION_SET_CMD | FOUR_BIT<<DL_POSITION | TWO_LINES<<N_POSITION | TEN_DOT_FONT<<F_POSITION);
 	LCDText_Write_4bits(COMMAND, DISPLAY_CONTROL_CMD | DISPLAY_OFF<<D_POSITION | CURSOR_OFF<<C_POSITION | BLINK_CURSOR_OFF<<B_POSITION);
 	LCDText_Write_4bits(COMMAND, CLEAR_DISPLAY_CMD);
@@ -37,18 +37,11 @@ void LCDText_Write_4bits(int rs, int data){
 	wait_ChronoUs(37);
 }
 
-void write_pin(int val, int pin){
-	if(val>0)LPC_GPIO0->FIOSET|=(1<<pin);
-	else LPC_GPIO0->FIOCLR|=(1<<pin);
-}
-
 void LCDText_Send_4bits(int  rs, int data){
 	if(rs==DATA)LPC_GPIO1->FIOSET|=(1<<LCD_RS);
 	else LPC_GPIO1->FIOCLR|=(1<<LCD_RS);
-	write_pin(data&1,LCD_DB4);
-	write_pin((data>>1)&1,LCD_DB5);
-	write_pin((data>>2)&1,LCD_DB6);
-	write_pin((data>>3)&1,LCD_DB7);
+	LPC_GPIO0->FIOCLR|= (0xF<<LCD_DB4);
+	LPC_GPIO0->FIOSET|= ((0xF&data)<<LCD_DB4);
 	LPC_GPIO1->FIOSET|=(1<<LCD_ENABLE);
 	wait_ChronoUs(1);
 	LPC_GPIO1->FIOCLR|=(1<<LCD_ENABLE);
@@ -58,6 +51,7 @@ void LCDText_Send_4bits(int  rs, int data){
 void LCDText_WriteChar(char ch){
 	LCDText_Write_4bits(DATA,ch);
 }
+
 void LCDText_WriteString(char *str){
 	for (short i= 0; str[i]!= '\0'; ++i) {
 		if(i+col==16){
@@ -68,9 +62,9 @@ void LCDText_WriteString(char *str){
 	}
 }
 
-void LCDText_Locate(int row, int column){
-	LCDText_Write_4bits(COMMAND, SET_DDRAM_ADDR_CMD | (row<<ROW_POSITION) | (column&MAX_COL_VALUE));
-	this->row=row;
+void LCDText_Locate(int r, int column){
+	LCDText_Write_4bits(COMMAND, SET_DDRAM_ADDR_CMD | (r<<ROW_POSITION) | (column&MAX_COL_VALUE));
+	row=r;
 	col=column;
 }
 
@@ -80,8 +74,14 @@ void LCDText_Clear(void){
 }
 
 void LCDText_Printf(char *fmt, ...){
-
-}/* DESAFIO */
+	va_list valist;
+	va_start(valist,fmt);
+	char str[MAX_CHAR];
+	int ret=vsprintf(str, fmt, valist);
+	if(ret<0 || ret>MAX_CHAR)
+		LCDText_WriteString("Printf fmt fail");
+	else LCDText_WriteString(str);
+}
 
 
 

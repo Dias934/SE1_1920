@@ -58,7 +58,7 @@
 /**
  *  @brief	Interupt mask of MR0 in IR register
 */
-#define MRO_INTERRUPT 1
+#define MR0_INTERRUPT 1
 
 /**
  *  @brief	Disable and reset TC and PC
