@@ -9,6 +9,7 @@ C_SRCS += \
 ../src/crp.c \
 ../src/data_storage.c \
 ../src/menu.c \
+../src/menu_change_field.c \
 ../src/menu_maintenance.c \
 ../src/menu_normal.c \
 ../src/project.c 
@@ -19,6 +20,7 @@ OBJS += \
 ./src/crp.o \
 ./src/data_storage.o \
 ./src/menu.o \
+./src/menu_change_field.o \
 ./src/menu_maintenance.o \
 ./src/menu_normal.o \
 ./src/project.o 
@@ -29,6 +31,7 @@ C_DEPS += \
 ./src/crp.d \
 ./src/data_storage.d \
 ./src/menu.d \
+./src/menu_change_field.d \
 ./src/menu_maintenance.d \
 ./src/menu_normal.d \
 ./src/project.d 

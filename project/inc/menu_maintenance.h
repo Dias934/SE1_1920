@@ -8,9 +8,16 @@
 #ifndef MENU_MAINTENANCE_H_
 #define MENU_MAINTENANCE_H_
 
-#include "ui.h"
 #include "menu.h"
-#include "data_storage.h"
+#include "menu_change_field.h"
+
+typedef struct{
+	uint32_t *(*change_time)();
+	uint32_t *(*change_date)();
+	uint32_t *(*change_temp_unit)();
+}Views;
+
+void view_maintenance();
 
 uint32_t * maintenance_execution();
 

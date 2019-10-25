@@ -15,8 +15,11 @@
 #include "LPC17xx.h"
 #endif
 #include "wait.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "stdarg.h"
 #include "HD44780.h"
-#include <stdarg.h>
+
 
 /** @defgroup LCD lcd
  * This package provides the core capabilities for the LCD Display.
@@ -106,7 +109,7 @@
  * @brief LCD instruction initialization function to be able to send and control the LCD using 4 bits.
  * @note Call this function only at the beginning of the program and only once
  */
-void LCDText_Init(void);
+void init_LCDText(void);
 
 /**
  * @brief	Writes the given character on the LCD in the current cursor position.
@@ -140,6 +143,10 @@ void LCDText_Clear(void);
  * @note   identical to the C printf library.
  */
 void LCDText_Printf(char *fmt, ...); /* DESAFIO */
+
+void LCDText_PrintBinary(int bin);
+
+void LCDText_Cursor(int state);
 
 /**
  * @}

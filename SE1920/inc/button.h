@@ -128,7 +128,7 @@ typedef struct{
  * @brief	Initializes the Button API.
  * @note	This function must be called prior to any other BUTTON functions.
  */
-void BUTTON_Init(void);
+void init_BUTTON(void);
 
 /**
  * @brief	Read the buttons values

@@ -1,29 +1,43 @@
-16:58:38 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+18:02:45 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-16:58:38 **** Incremental Build of configuration Debug for project lab_3 ****
+18:02:45 **** Incremental Build of configuration Debug for project project ****
 make -r -j8 all 
-Building target: lab_3.axf
+Building file: ../src/data_storage.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\project\inc" -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/data_storage.d" -MT"src/data_storage.o" -MT"src/data_storage.d" -o "src/data_storage.o" "../src/data_storage.c"
+Finished building: ../src/data_storage.c
+ 
+Building target: project.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -L"D:\Isel\19-20\Inverno\SE1\SE1920\Debug" -Xlinker -Map="lab_3.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "lab_2_Debug.ld" -o "lab_3.axf"  ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/lab_3.o   -lCMSIS_CORE_LPC17xx -lSE1920
+arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -L"D:\Isel\19-20\Inverno\SE1\SE1920\Debug" -Xlinker -Map="project.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "project_Debug.ld" -o "project.axf"  ./src/calendar.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/data_storage.o ./src/menu.o ./src/menu_change_field.o ./src/menu_maintenance.o ./src/menu_normal.o ./src/project.o   -lCMSIS_CORE_LPC17xx -lSE1920
 Memory region         Used Size  Region Size  %age Used
-       MFlash512:       12028 B       512 KB      2.29%
-        RamLoc32:         508 B        32 KB      1.55%
+       MFlash512:       14932 B       512 KB      2.85%
+        RamLoc32:         660 B        32 KB      2.01%
         RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: lab_3.axf
+Finished building target: project.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "lab_3.axf"; # arm-none-eabi-objcopy -v -O binary "lab_3.axf" "lab_3.bin" ; # checksum -p LPC1769 -d "lab_3.bin";
+arm-none-eabi-size "project.axf"; # arm-none-eabi-objcopy -v -O binary "project.axf" "project.bin" ; # checksum -p LPC1769 -d "project.bin";
    text	   data	    bss	    dec	    hex	filename
-  12024	      4	    504	  12532	   30f4	lab_3.axf
+  14896	     36	    624	  15556	   3cc4	project.axf
  
-16:58:46 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+18:02:54 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-16:58:47 **** Incremental Build of configuration Debug for project lab_3 ****
+18:02:54 **** Incremental Build of configuration Debug for project project ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-16:58:49 **** Incremental Build of configuration Debug for project lab_3 ****
+18:02:55 **** Incremental Build of configuration Debug for project project ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+18:03:19 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+18:03:19 **** Incremental Build of configuration Debug for project project ****
+make -r -j8 all 
+make: Nothing to be done for 'all'.
+18:03:20 **** Incremental Build of configuration Debug for project project ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.

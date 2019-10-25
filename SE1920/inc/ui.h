@@ -10,7 +10,6 @@
 #ifndef UI_H_
 #define UI_H_
 
-#include <wait.h>
 #include <led.h>
 #include <button.h>
 #include <lcd.h>

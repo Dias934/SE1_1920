@@ -1,1 +1,2 @@
-menu_normal.c:11:12:normal_execution	8	static
+menu_normal.c:11:6:view_normal	8	static
+menu_normal.c:21:12:normal_execution	8	static

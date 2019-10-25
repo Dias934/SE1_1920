@@ -1,1 +1,13 @@
-data_storage.c:11:6:init_data_st	16	static
+data_storage.c:16:6:init_data_st	16	static
+data_storage.c:20:6:backup_dateTime	8	static
+data_storage.c:24:6:send_dateTime	8	static
+data_storage.c:28:6:get_RTC_dateTime	40	static
+data_storage.c:33:6:get_Time	24	static
+data_storage.c:37:6:get_Date	24	static
+data_storage.c:41:6:change_Time	16	static
+data_storage.c:47:6:change_sec	16	static
+data_storage.c:51:6:change_min	16	static
+data_storage.c:55:6:change_hour	16	static
+data_storage.c:59:6:change_day	16	static
+data_storage.c:63:6:change_month	16	static
+data_storage.c:67:6:change_year	16	static

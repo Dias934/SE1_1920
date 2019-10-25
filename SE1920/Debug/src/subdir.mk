@@ -7,6 +7,8 @@ C_SRCS += \
 ../src/button.c \
 ../src/lcd.c \
 ../src/led.c \
+../src/peripherals.c \
+../src/rtc.c \
 ../src/ui.c \
 ../src/wait.c 
 
@@ -14,6 +16,8 @@ OBJS += \
 ./src/button.o \
 ./src/lcd.o \
 ./src/led.o \
+./src/peripherals.o \
+./src/rtc.o \
 ./src/ui.o \
 ./src/wait.o 
 
@@ -21,6 +25,8 @@ C_DEPS += \
 ./src/button.d \
 ./src/lcd.d \
 ./src/led.d \
+./src/peripherals.d \
+./src/rtc.d \
 ./src/ui.d \
 ./src/wait.d 
 

@@ -10,35 +10,37 @@
 
 #include "calendar.h"
 #include "stdarg.h"
+#include "stdio.h"
 #include "stdlib.h"
+#include "rtc.h"
 
-/*#define MIN_SECOND 0
-#define MAX_SECOND 59
-#define MIN_MINUTE 0
-#define MAX_MINUTE 59
-#define MIN_HOUR 0
-#define MAX_HOUR 23
+extern struct tm dateTime;
 
-typedef struct{
-	short second;
-	short minute;
-	short hour;
-}Time;*/
+const int* s[]={&dateTime.tm_sec};
+
 
 void init_data_st(int units);
 
+void backup_dateTime();
 
-/*void update_Seconds();
-uint16_t set_Minute(uint16_t minute);
-uint16_t set_Hour(uint16_t hour);
+void send_dateTime();
 
-uint16_t get_Day();
-uint16_t get_Month();
-uint16_t get_Year();
-uint16_t get_Minute();
-uint16_t get_Year();
+void get_RTC_dateTime(char *str);
 
-*/
+void get_Time(char* str);
 
+void get_Date(char* str);
+
+void change_sec(int set);
+
+void change_min(int set);
+
+void change_hour(int set);
+
+void change_day(int set);
+
+void change_month(int set);
+
+void change_year(int set);
 
 #endif /* DATA_STORAGE_H_ */

@@ -8,7 +8,7 @@
 
 uint32_t __ms=0;
 
-void wait_init(void){
+void init_wait(void){
 	SysTick_Config(SystemCoreClock/MILLISECONDS_DIVISION);
 	LPC_SC->PCLKSEL0=(CCLK_FREQ<<TIMER0_CLK);
 	LPC_TIM0->CTCR=TIMER_MODE;

@@ -202,8 +202,7 @@ enum S_C_VAL{
  * @defgroup HD44780_Function_Set_Command Function Set Command
  * Function Set command
  * @{
- *@brief  Sets interface data length (DL), number of display lines
- *@brief (N), and character font (F).
+ *@brief  Sets interface data length (DL), number of display lines (N), and character font (F).
  *@note  Perform the function at the head of the program before executing
  *@note  any instructions (except for the read busy flag and address instruction).
  *@note  From this point, the function set instruction cannot be executed unless the

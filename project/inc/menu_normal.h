@@ -8,9 +8,9 @@
 #ifndef MENU_NORMAL_H_
 #define MENU_NORMAL_H_
 
-#include "ui.h"
 #include "menu.h"
-#include "data_storage.h"
+
+void view_normal();
 
 uint32_t * normal_execution();
 

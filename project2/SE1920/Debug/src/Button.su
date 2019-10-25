@@ -1,5 +1,0 @@
-Button.c:12:6:BUTTON_Init	4	static
-Button.c:18:5:BUTTON_Hit	16	static
-Button.c:24:5:BUTTON_Read	16	static
-Button.c:30:6:BUTTON_check	16	static
-Button.c:47:5:BUTTON_GetButtonsEvents	32	static

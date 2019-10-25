@@ -13,16 +13,19 @@
 #endif
 
 #include <cr_section_macros.h>
-#include <ui.h>
+#include <peripherals.h>
 
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
 
 int main(void) {
-	init_ui();
-	LCDText_Printf("oiqerhoewrowergoqeboqerbogbweroboerboq: %d",15);
+	init_peripherals();
+	int a;
 	while (1) {
+		a=BUTTON_Read();
+		LCDText_Clear();
+		LCDText_PrintBinary(a);
 		wait_ms(200);
 	}
 	return 0;

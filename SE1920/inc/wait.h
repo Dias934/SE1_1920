@@ -95,7 +95,7 @@ extern uint32_t __ms;
  * @brief	Initialises the wait API for 1 ms resolution.
  * @note	This function must be called prior to any other WAIT functions.
  */
-void wait_init();
+void init_wait();
 
 /**
  * @brief	waits the corresponding time from hz to ms.
