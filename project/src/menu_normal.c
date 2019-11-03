@@ -6,19 +6,14 @@
  */
 
 #include "menu_normal.h"
-#include "menu_maintenance.h"
 
-void view_normal(){
-	//char str[16];
+/*void view_normal(){
 	get_RTC_dateTime(str);
 	LCDText_Locate(0,0);
 	LCDText_WriteString(str);
-	//LCDText_Locate(1,0);
-	//get_Temperature(str);
-	//LCDText_WriteString(str);
-}
+}*/
 
-uint32_t * normal_execution(){
+void * normal_execution(){
 	turn_off_led();
 	view_normal();
 	button_map=BUTTON_GetButtonsEvents();

@@ -15,21 +15,30 @@
 #include "rtc.h"
 
 extern struct tm dateTime;
+extern short fieldToChange;
 
-const int* s[]={&dateTime.tm_sec};
+#define TIME_FIELDS 2 //number of fields the user can change in the structure of time (HH:mm)
+#define DATE_FIELDS 3 //number of fields the user can change in the structure of date (DD/MM/YYYY)
+//const int* s[]={&dateTime.tm_sec};
 
 
 void init_data_st(int units);
 
 void backup_dateTime();
 
-void send_dateTime();
+void send_time();
 
-void get_RTC_dateTime(char *str);
+void send_date();
+
+void send_dateTime(short mask);
+
+void dateTimeToString(char *str);
 
 void get_Time(char* str);
 
 void get_Date(char* str);
+
+int nextField(int type);
 
 void change_sec(int set);
 

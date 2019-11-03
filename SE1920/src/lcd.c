@@ -50,7 +50,11 @@ void LCDText_Send_4bits(int  rs, int data){
 }
 
 void LCDText_WriteChar(char ch){
-	LCDText_Write_4bits(DATA,ch);
+	if(ch=='\n'){
+		col=0;
+		row=(row+1)%2;
+	}
+	else LCDText_Write_4bits(DATA,ch);
 	col++;
 	if(col>=16){
 		col=0;

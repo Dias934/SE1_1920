@@ -9,9 +9,8 @@
 #define MENU_NORMAL_H_
 
 #include "menu.h"
+#include "menu_maintenance.h"
 
-void view_normal();
-
-uint32_t * normal_execution();
+void * normal_execution();
 
 #endif /* MENU_NORMAL_H_ */

@@ -1,6 +1,0 @@
-menu_change_field.c:16:6:change_time_view	8	static
-menu_change_field.c:24:6:change_date_view	8	static
-menu_change_field.c:32:6:change_temperature_units_view	8	static
-menu_change_field.c:40:12:change_time	8	static
-menu_change_field.c:94:12:change_date	4	static
-menu_change_field.c:98:12:change_temperature_units	4	static

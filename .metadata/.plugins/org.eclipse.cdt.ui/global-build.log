@@ -1,7 +1,7 @@
-18:02:45 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+02:55:21 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-18:02:45 **** Incremental Build of configuration Debug for project project ****
+02:55:21 **** Incremental Build of configuration Debug for project project ****
 make -r -j8 all 
 Building file: ../src/data_storage.c
 Invoking: MCU C Compiler
@@ -10,10 +10,10 @@ Finished building: ../src/data_storage.c
  
 Building target: project.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -L"D:\Isel\19-20\Inverno\SE1\SE1920\Debug" -Xlinker -Map="project.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "project_Debug.ld" -o "project.axf"  ./src/calendar.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/data_storage.o ./src/menu.o ./src/menu_change_field.o ./src/menu_maintenance.o ./src/menu_normal.o ./src/project.o   -lCMSIS_CORE_LPC17xx -lSE1920
+arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -L"D:\Isel\19-20\Inverno\SE1\SE1920\Debug" -Xlinker -Map="project.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "project_Debug.ld" -o "project.axf"  ./src/calendar.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/data_storage.o ./src/menu.o ./src/menu_maintenance.o ./src/menu_normal.o ./src/project.o ./src/view.o   -lCMSIS_CORE_LPC17xx -lSE1920
 Memory region         Used Size  Region Size  %age Used
-       MFlash512:       14932 B       512 KB      2.85%
-        RamLoc32:         660 B        32 KB      2.01%
+       MFlash512:       15576 B       512 KB      2.97%
+        RamLoc32:         728 B        32 KB      2.22%
         RamAHB32:          0 GB        32 KB      0.00%
 Finished building target: project.axf
  
@@ -21,23 +21,20 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "project.axf"; # arm-none-eabi-objcopy -v -O binary "project.axf" "project.bin" ; # checksum -p LPC1769 -d "project.bin";
    text	   data	    bss	    dec	    hex	filename
-  14896	     36	    624	  15556	   3cc4	project.axf
+  15488	     88	    640	  16216	   3f58	project.axf
  
-18:02:54 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+02:55:25 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-18:02:54 **** Incremental Build of configuration Debug for project project ****
+02:55:26 **** Incremental Build of configuration Debug for project project ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-18:02:55 **** Incremental Build of configuration Debug for project project ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-18:03:19 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+02:55:40 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-18:03:19 **** Incremental Build of configuration Debug for project project ****
+02:55:41 **** Incremental Build of configuration Debug for project project ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.
-18:03:20 **** Incremental Build of configuration Debug for project project ****
+02:55:41 **** Incremental Build of configuration Debug for project project ****
 make -r -j8 all 
 make: Nothing to be done for 'all'.

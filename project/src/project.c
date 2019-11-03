@@ -14,7 +14,7 @@
 // TODO: insert other definitions and declarations here
 
 int main(void) {
-	uint32_t *(*menu_execute)()=init_menu();
+	void *(*menu_execute)()=init_menu();
     while(1) {
     	menu_execute=menu_execute();
     }

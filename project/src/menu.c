@@ -10,18 +10,20 @@
 
 uint32_t count;
 int button_map;
-char str[16]="";
-uint32_t * init_menu(){
+
+void *init_menu(){
 	init_peripherals();
-	view_normal();
 	return &normal_execution;
 }
 
-uint32_t * up_and_down_pressed(uint32_t* origen(), uint32_t *destiny(), uint32_t *led_state()){
-	if(count==0)count=wait_elapsed(count);
-	if((wait_elapsed(0)/PRESSING_TIME)%2>0)turn_on_led();
-	else turn_off_led();
-	if(wait_elapsed(count)>TWO_SECONDS){
+void *up_and_down_pressed(void *origen(), void *destiny(), void *led_state()){
+	if(count==0)
+		count=wait_elapsed(count);
+	if((wait_elapsed(0)/PRESSING_TIME)%2>0)
+		turn_on_led();
+	else
+		turn_off_led();
+	if(wait_elapsed(count)>=TWO_SECONDS){
 		count=0;
 		while(button_map!=NOT_PRESSED){
 			if((wait_elapsed(0)/RELEASE_TIME)%2>0)turn_on_led();

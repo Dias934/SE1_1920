@@ -5,7 +5,7 @@ D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(syste
 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
                               ./src/menu.o (BUTTON_GetButtonsEvents)
 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                              ./src/menu_change_field.o (LCDText_Locate)
+                              ./src/menu_maintenance.o (LCDText_Locate)
 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
                               ./src/menu.o (turn_off_led)
 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
@@ -176,14 +176,16 @@ Discarded input sections
  .group         0x00000000        0xc ./src/data_storage.o
  .group         0x00000000        0xc ./src/data_storage.o
  .group         0x00000000        0xc ./src/data_storage.o
+ .group         0x00000000        0xc ./src/data_storage.o
  .text          0x00000000        0x0 ./src/data_storage.o
  .data          0x00000000        0x0 ./src/data_storage.o
  .bss           0x00000000        0x0 ./src/data_storage.o
  .rodata.MAX_MAP
                 0x00000000        0xc ./src/data_storage.o
- .data.s        0x00000000        0x4 ./src/data_storage.o
  .text.init_data_st
-                0x00000000       0x1c ./src/data_storage.o
+                0x00000000       0x24 ./src/data_storage.o
+ .text.send_date
+                0x00000000        0xe ./src/data_storage.o
  .text.change_sec
                 0x00000000       0x24 ./src/data_storage.o
  .text.change_min
@@ -220,9 +222,14 @@ Discarded input sections
  .group         0x00000000        0xc ./src/menu.o
  .group         0x00000000        0xc ./src/menu.o
  .group         0x00000000        0xc ./src/menu.o
+ .group         0x00000000        0xc ./src/menu.o
+ .group         0x00000000        0xc ./src/menu.o
+ .group         0x00000000        0xc ./src/menu.o
  .text          0x00000000        0x0 ./src/menu.o
  .data          0x00000000        0x0 ./src/menu.o
  .bss           0x00000000        0x0 ./src/menu.o
+ .rodata.MAX_MAP
+                0x00000000        0xc ./src/menu.o
  .debug_macro   0x00000000      0xaa2 ./src/menu.o
  .debug_macro   0x00000000       0x1c ./src/menu.o
  .debug_macro   0x00000000       0x3a ./src/menu.o
@@ -235,48 +242,13 @@ Discarded input sections
  .debug_macro   0x00000000       0xa0 ./src/menu.o
  .debug_macro   0x00000000       0x22 ./src/menu.o
  .debug_macro   0x00000000       0x10 ./src/menu.o
- .debug_macro   0x00000000       0xa0 ./src/menu.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .group         0x00000000        0xc ./src/menu_change_field.o
- .text          0x00000000        0x0 ./src/menu_change_field.o
- .data          0x00000000        0x0 ./src/menu_change_field.o
- .bss           0x00000000        0x0 ./src/menu_change_field.o
- .debug_macro   0x00000000      0xaa2 ./src/menu_change_field.o
- .debug_macro   0x00000000       0x1c ./src/menu_change_field.o
- .debug_macro   0x00000000       0x3a ./src/menu_change_field.o
- .debug_macro   0x00000000       0x10 ./src/menu_change_field.o
- .debug_macro   0x00000000      0x12e ./src/menu_change_field.o
- .debug_macro   0x00000000      0x5b3 ./src/menu_change_field.o
- .debug_macro   0x00000000       0x2d ./src/menu_change_field.o
- .debug_macro   0x00000000      0xbb1 ./src/menu_change_field.o
- .debug_macro   0x00000000      0x2c7 ./src/menu_change_field.o
- .debug_macro   0x00000000       0x76 ./src/menu_change_field.o
- .debug_macro   0x00000000       0x46 ./src/menu_change_field.o
- .debug_macro   0x00000000       0xa0 ./src/menu_change_field.o
- .debug_macro   0x00000000       0x22 ./src/menu_change_field.o
- .debug_macro   0x00000000       0x1c ./src/menu_change_field.o
- .debug_macro   0x00000000       0x95 ./src/menu_change_field.o
- .debug_macro   0x00000000       0x52 ./src/menu_change_field.o
- .debug_macro   0x00000000       0x10 ./src/menu_change_field.o
- .debug_macro   0x00000000       0xa0 ./src/menu_change_field.o
- .debug_macro   0x00000000       0x1c ./src/menu_change_field.o
+ .debug_macro   0x00000000       0xac ./src/menu.o
+ .debug_macro   0x00000000       0x16 ./src/menu.o
+ .debug_macro   0x00000000       0x22 ./src/menu.o
+ .debug_macro   0x00000000       0x10 ./src/menu.o
+ .group         0x00000000        0xc ./src/menu_maintenance.o
+ .group         0x00000000        0xc ./src/menu_maintenance.o
+ .group         0x00000000        0xc ./src/menu_maintenance.o
  .group         0x00000000        0xc ./src/menu_maintenance.o
  .group         0x00000000        0xc ./src/menu_maintenance.o
  .group         0x00000000        0xc ./src/menu_maintenance.o
@@ -299,6 +271,8 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/menu_maintenance.o
  .data          0x00000000        0x0 ./src/menu_maintenance.o
  .bss           0x00000000        0x0 ./src/menu_maintenance.o
+ .rodata.MAX_MAP
+                0x00000000        0xc ./src/menu_maintenance.o
  .debug_macro   0x00000000      0xaa2 ./src/menu_maintenance.o
  .debug_macro   0x00000000       0x1c ./src/menu_maintenance.o
  .debug_macro   0x00000000       0x3a ./src/menu_maintenance.o
@@ -316,8 +290,14 @@ Discarded input sections
  .debug_macro   0x00000000       0x95 ./src/menu_maintenance.o
  .debug_macro   0x00000000       0x52 ./src/menu_maintenance.o
  .debug_macro   0x00000000       0x10 ./src/menu_maintenance.o
- .debug_macro   0x00000000       0xa0 ./src/menu_maintenance.o
- .debug_macro   0x00000000       0x1c ./src/menu_maintenance.o
+ .debug_macro   0x00000000       0xac ./src/menu_maintenance.o
+ .debug_macro   0x00000000       0x16 ./src/menu_maintenance.o
+ .debug_macro   0x00000000       0x22 ./src/menu_maintenance.o
+ .debug_macro   0x00000000       0x10 ./src/menu_maintenance.o
+ .debug_macro   0x00000000       0x16 ./src/menu_maintenance.o
+ .group         0x00000000        0xc ./src/menu_normal.o
+ .group         0x00000000        0xc ./src/menu_normal.o
+ .group         0x00000000        0xc ./src/menu_normal.o
  .group         0x00000000        0xc ./src/menu_normal.o
  .group         0x00000000        0xc ./src/menu_normal.o
  .group         0x00000000        0xc ./src/menu_normal.o
@@ -340,6 +320,8 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/menu_normal.o
  .data          0x00000000        0x0 ./src/menu_normal.o
  .bss           0x00000000        0x0 ./src/menu_normal.o
+ .rodata.MAX_MAP
+                0x00000000        0xc ./src/menu_normal.o
  .debug_macro   0x00000000      0xaa2 ./src/menu_normal.o
  .debug_macro   0x00000000       0x1c ./src/menu_normal.o
  .debug_macro   0x00000000       0x3a ./src/menu_normal.o
@@ -357,8 +339,14 @@ Discarded input sections
  .debug_macro   0x00000000       0x95 ./src/menu_normal.o
  .debug_macro   0x00000000       0x52 ./src/menu_normal.o
  .debug_macro   0x00000000       0x10 ./src/menu_normal.o
- .debug_macro   0x00000000       0xa0 ./src/menu_normal.o
- .debug_macro   0x00000000       0x1c ./src/menu_normal.o
+ .debug_macro   0x00000000       0xac ./src/menu_normal.o
+ .debug_macro   0x00000000       0x16 ./src/menu_normal.o
+ .debug_macro   0x00000000       0x22 ./src/menu_normal.o
+ .debug_macro   0x00000000       0x10 ./src/menu_normal.o
+ .debug_macro   0x00000000       0x16 ./src/menu_normal.o
+ .group         0x00000000        0xc ./src/project.o
+ .group         0x00000000        0xc ./src/project.o
+ .group         0x00000000        0xc ./src/project.o
  .group         0x00000000        0xc ./src/project.o
  .group         0x00000000        0xc ./src/project.o
  .group         0x00000000        0xc ./src/project.o
@@ -381,6 +369,8 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/project.o
  .data          0x00000000        0x0 ./src/project.o
  .bss           0x00000000        0x0 ./src/project.o
+ .rodata.MAX_MAP
+                0x00000000        0xc ./src/project.o
  .debug_macro   0x00000000      0xaa2 ./src/project.o
  .debug_macro   0x00000000       0x1c ./src/project.o
  .debug_macro   0x00000000       0x3a ./src/project.o
@@ -398,8 +388,50 @@ Discarded input sections
  .debug_macro   0x00000000       0x95 ./src/project.o
  .debug_macro   0x00000000       0x52 ./src/project.o
  .debug_macro   0x00000000       0x10 ./src/project.o
- .debug_macro   0x00000000       0xa0 ./src/project.o
- .debug_macro   0x00000000       0x1c ./src/project.o
+ .debug_macro   0x00000000       0xac ./src/project.o
+ .debug_macro   0x00000000       0x16 ./src/project.o
+ .debug_macro   0x00000000       0x22 ./src/project.o
+ .debug_macro   0x00000000       0x10 ./src/project.o
+ .debug_macro   0x00000000       0x16 ./src/project.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .group         0x00000000        0xc ./src/view.o
+ .text          0x00000000        0x0 ./src/view.o
+ .data          0x00000000        0x0 ./src/view.o
+ .bss           0x00000000        0x0 ./src/view.o
+ .rodata.MAX_MAP
+                0x00000000        0xc ./src/view.o
+ .debug_macro   0x00000000      0xaa2 ./src/view.o
+ .debug_macro   0x00000000       0x10 ./src/view.o
+ .debug_macro   0x00000000       0x16 ./src/view.o
+ .debug_macro   0x00000000       0x22 ./src/view.o
+ .debug_macro   0x00000000       0x10 ./src/view.o
+ .debug_macro   0x00000000      0x12e ./src/view.o
+ .debug_macro   0x00000000       0xa0 ./src/view.o
+ .debug_macro   0x00000000       0x22 ./src/view.o
+ .debug_macro   0x00000000       0x10 ./src/view.o
+ .debug_macro   0x00000000       0x1c ./src/view.o
+ .debug_macro   0x00000000       0x3a ./src/view.o
+ .debug_macro   0x00000000      0x5b3 ./src/view.o
+ .debug_macro   0x00000000       0x2d ./src/view.o
+ .debug_macro   0x00000000      0xbb1 ./src/view.o
+ .debug_macro   0x00000000      0x2c7 ./src/view.o
+ .debug_macro   0x00000000       0xac ./src/view.o
+ .debug_macro   0x00000000       0x10 ./src/view.o
  .group         0x00000000        0xc D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
  .group         0x00000000        0xc D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
  .group         0x00000000        0xc D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
@@ -544,7 +576,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x95 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
  .debug_macro   0x00000000       0x52 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
  .debug_macro   0x00000000       0x10 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
- .debug_macro   0x00000000       0xa0 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
+ .debug_macro   0x00000000       0xac D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
  .group         0x00000000        0xc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
  .group         0x00000000        0xc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
  .group         0x00000000        0xc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
@@ -575,7 +607,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x2d D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
  .debug_macro   0x00000000      0xbb1 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
  .debug_macro   0x00000000      0x2c7 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
- .debug_macro   0x00000000       0xa0 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+ .debug_macro   0x00000000       0xac D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
  .debug_macro   0x00000000       0x22 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
  .group         0x00000000        0xc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
  .group         0x00000000        0xc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
@@ -894,10 +926,10 @@ LOAD ./src/cr_startup_lpc175x_6x.o
 LOAD ./src/crp.o
 LOAD ./src/data_storage.o
 LOAD ./src/menu.o
-LOAD ./src/menu_change_field.o
 LOAD ./src/menu_maintenance.o
 LOAD ./src/menu_normal.o
 LOAD ./src/project.o
+LOAD ./src/view.o
 LOAD D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a
 LOAD D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a
 START GROUP
@@ -919,7 +951,7 @@ END GROUP
                 0x20084000                __top_RamAHB32 = 0x20084000
                 0x20084000                __top_RAM2 = 0x20084000
 
-.text           0x00000000     0x3a30
+.text           0x00000000     0x3c80
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -928,16 +960,16 @@ END GROUP
                 0x000000cc                . = ALIGN (0x4)
                 0x000000cc                __section_table_start = .
                 0x000000cc                __data_section_table = .
-                0x000000cc        0x4 LONG 0x3a30 LOADADDR (.data)
+                0x000000cc        0x4 LONG 0x3c80 LOADADDR (.data)
                 0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
-                0x000000d4        0x4 LONG 0x24 SIZEOF (.data)
-                0x000000d8        0x4 LONG 0x3a30 LOADADDR (.data_RAM2)
+                0x000000d4        0x4 LONG 0x58 SIZEOF (.data)
+                0x000000d8        0x4 LONG 0x3c80 LOADADDR (.data_RAM2)
                 0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
                 0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x000000e4                __data_section_table_end = .
                 0x000000e4                __bss_section_table = .
-                0x000000e4        0x4 LONG 0x10000024 ADDR (.bss)
-                0x000000e8        0x4 LONG 0x270 SIZEOF (.bss)
+                0x000000e4        0x4 LONG 0x10000058 ADDR (.bss)
+                0x000000e8        0x4 LONG 0x280 SIZEOF (.bss)
                 0x000000ec        0x4 LONG 0x2007c000 ADDR (.bss_RAM2)
                 0x000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x000000f4                __bss_section_table_end = .
@@ -1002,330 +1034,364 @@ END GROUP
                 0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
  *(.text*)
  .text.backup_dateTime
-                0x00000300       0x14 ./src/data_storage.o
+                0x00000300       0x1c ./src/data_storage.o
                 0x00000300                backup_dateTime
+ .text.send_time
+                0x0000031c        0xe ./src/data_storage.o
+                0x0000031c                send_time
+ *fill*         0x0000032a        0x2 ff
  .text.send_dateTime
-                0x00000314       0x14 ./src/data_storage.o
-                0x00000314                send_dateTime
- .text.get_RTC_dateTime
-                0x00000328       0x64 ./src/data_storage.o
-                0x00000328                get_RTC_dateTime
+                0x0000032c       0x2c ./src/data_storage.o
+                0x0000032c                send_dateTime
+ .text.dateTimeToString
+                0x00000358       0x64 ./src/data_storage.o
+                0x00000358                dateTimeToString
  .text.get_Time
-                0x0000038c       0x48 ./src/data_storage.o
-                0x0000038c                get_Time
+                0x000003bc       0x28 ./src/data_storage.o
+                0x000003bc                get_Time
  .text.get_Date
-                0x000003d4       0x38 ./src/data_storage.o
-                0x000003d4                get_Date
- .text.change_Time
-                0x0000040c       0x7c ./src/data_storage.o
-                0x0000040c                change_Time
- .text.init_menu
-                0x00000488       0x18 ./src/menu.o
-                0x00000488                init_menu
- .text.up_and_down_pressed
-                0x000004a0       0xbc ./src/menu.o
-                0x000004a0                up_and_down_pressed
- .text.change_time_view
-                0x0000055c       0x34 ./src/menu_change_field.o
-                0x0000055c                change_time_view
- .text.change_date_view
-                0x00000590       0x34 ./src/menu_change_field.o
-                0x00000590                change_date_view
- .text.change_temperature_units_view
-                0x000005c4       0x1c ./src/menu_change_field.o
-                0x000005c4                change_temperature_units_view
+                0x000003e4       0x38 ./src/data_storage.o
+                0x000003e4                get_Date
  .text.change_time
-                0x000005e0      0x208 ./src/menu_change_field.o
-                0x000005e0                change_time
- .text.change_date
-                0x000007e8       0x14 ./src/menu_change_field.o
-                0x000007e8                change_date
- .text.change_temperature_units
-                0x000007fc       0x14 ./src/menu_change_field.o
-                0x000007fc                change_temperature_units
+                0x0000041c       0xb0 ./src/data_storage.o
+                0x0000041c                change_time
+ .text.nextField
+                0x000004cc       0x34 ./src/data_storage.o
+                0x000004cc                nextField
+ .text.init_menu
+                0x00000500       0x14 ./src/menu.o
+                0x00000500                init_menu
+ .text.up_and_down_pressed
+                0x00000514       0xbc ./src/menu.o
+                0x00000514                up_and_down_pressed
  .text.maintenance_execution
-                0x00000810      0x1a8 ./src/menu_maintenance.o
-                0x00000810                maintenance_execution
- .text.view_normal
-                0x000009b8       0x20 ./src/menu_normal.o
-                0x000009b8                view_normal
+                0x000005d0      0x11c ./src/menu_maintenance.o
+                0x000005d0                maintenance_execution
+ .text.maintenance_buttons_interaction
+                0x000006ec       0xcc ./src/menu_maintenance.o
+                0x000006ec                maintenance_buttons_interaction
+ .text.select_up_pressed
+                0x000007b8       0x54 ./src/menu_maintenance.o
+                0x000007b8                select_up_pressed
+ .text.select_down_pressed
+                0x0000080c       0x50 ./src/menu_maintenance.o
+                0x0000080c                select_down_pressed
+ .text.select_enter_pressed
+                0x0000085c       0x40 ./src/menu_maintenance.o
+                0x0000085c                select_enter_pressed
+ .text.select_field
+                0x0000089c       0x40 ./src/menu_maintenance.o
+                0x0000089c                select_field
+ .text.time_up_down_pressed
+                0x000008dc       0x80 ./src/menu_maintenance.o
+                0x000008dc                time_up_down_pressed
+ .text.time_enter_pressed
+                0x0000095c       0x74 ./src/menu_maintenance.o
+                0x0000095c                time_enter_pressed
+ .text.maintenance_change_time
+                0x000009d0       0x28 ./src/menu_maintenance.o
+                0x000009d0                maintenance_change_time
+ .text.maintenance_change_date
+                0x000009f8       0x28 ./src/menu_maintenance.o
+                0x000009f8                maintenance_change_date
+ .text.maintenance_change_temperature_units
+                0x00000a20       0x28 ./src/menu_maintenance.o
+                0x00000a20                maintenance_change_temperature_units
  .text.normal_execution
-                0x000009d8       0x64 ./src/menu_normal.o
-                0x000009d8                normal_execution
- .text.main     0x00000a3c       0x18 ./src/project.o
-                0x00000a3c                main
+                0x00000a48       0x64 ./src/menu_normal.o
+                0x00000a48                normal_execution
+ .text.main     0x00000aac       0x18 ./src/project.o
+                0x00000aac                main
+ .text.view_normal
+                0x00000ac4       0x28 ./src/view.o
+                0x00000ac4                view_normal
+ .text.view_maintenance
+                0x00000aec       0x40 ./src/view.o
+                0x00000aec                view_maintenance
+ .text.view_change_time
+                0x00000b2c       0x18 ./src/view.o
+                0x00000b2c                view_change_time
+ .text.view_change_date
+                0x00000b44       0x18 ./src/view.o
+                0x00000b44                view_change_date
+ .text.view_change_temperature_units
+                0x00000b5c        0xe ./src/view.o
+                0x00000b5c                view_change_temperature_units
+ *fill*         0x00000b6a        0x2 ff
  .text.SystemInit
-                0x00000a54       0xdc D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
-                0x00000a54                SystemInit
+                0x00000b6c       0xdc D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                0x00000b6c                SystemInit
  .text.init_BUTTON
-                0x00000b30       0x34 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
-                0x00000b30                init_BUTTON
+                0x00000c48       0x34 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+                0x00000c48                init_BUTTON
  .text.BUTTON_Hit
-                0x00000b64       0x28 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
-                0x00000b64                BUTTON_Hit
+                0x00000c7c       0x28 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+                0x00000c7c                BUTTON_Hit
  .text.BUTTON_check
-                0x00000b8c       0x82 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
-                0x00000b8c                BUTTON_check
- *fill*         0x00000c0e        0x2 ff
+                0x00000ca4       0x82 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+                0x00000ca4                BUTTON_check
+ *fill*         0x00000d26        0x2 ff
  .text.BUTTON_GetButtonsEvents
-                0x00000c10       0x78 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
-                0x00000c10                BUTTON_GetButtonsEvents
+                0x00000d28       0x78 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+                0x00000d28                BUTTON_GetButtonsEvents
  .text.init_LCDText
-                0x00000c88       0xc8 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                0x00000c88                init_LCDText
+                0x00000da0       0xc8 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x00000da0                init_LCDText
  .text.LCDText_Write_4bits
-                0x00000d50       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                0x00000d50                LCDText_Write_4bits
+                0x00000e68       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x00000e68                LCDText_Write_4bits
  .text.LCDText_Send_4bits
-                0x00000d7c       0x7c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                0x00000d7c                LCDText_Send_4bits
+                0x00000e94       0x7c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x00000e94                LCDText_Send_4bits
  .text.LCDText_WriteChar
-                0x00000df8       0x74 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                0x00000df8                LCDText_WriteChar
+                0x00000f10       0x9c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x00000f10                LCDText_WriteChar
  .text.LCDText_WriteString
-                0x00000e6c       0x3c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                0x00000e6c                LCDText_WriteString
+                0x00000fac       0x3c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x00000fac                LCDText_WriteString
  .text.LCDText_Locate
-                0x00000ea8       0x44 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                0x00000ea8                LCDText_Locate
+                0x00000fe8       0x44 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x00000fe8                LCDText_Locate
  .text.LCDText_Cursor
-                0x00000eec       0x28 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                0x00000eec                LCDText_Cursor
+                0x0000102c       0x28 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x0000102c                LCDText_Cursor
  .text.LCDText_Clear
-                0x00000f14       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                0x00000f14                LCDText_Clear
+                0x00001054       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x00001054                LCDText_Clear
  .text.init_led
-                0x00000f40       0x1c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
-                0x00000f40                init_led
+                0x00001080       0x1c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+                0x00001080                init_led
  .text.turn_on_led
-                0x00000f5c       0x24 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
-                0x00000f5c                turn_on_led
+                0x0000109c       0x24 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+                0x0000109c                turn_on_led
  .text.turn_off_led
-                0x00000f80       0x24 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
-                0x00000f80                turn_off_led
+                0x000010c0       0x24 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+                0x000010c0                turn_off_led
  .text.init_peripherals
-                0x00000fa4       0x16 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
-                0x00000fa4                init_peripherals
- *fill*         0x00000fba        0x2 ff
+                0x000010e4       0x16 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
+                0x000010e4                init_peripherals
+ *fill*         0x000010fa        0x2 ff
  .text.init_RTC
-                0x00000fbc       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
-                0x00000fbc                init_RTC
+                0x000010fc       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+                0x000010fc                init_RTC
  .text.RTC_GetValue
-                0x00000fe8       0x88 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
-                0x00000fe8                RTC_GetValue
+                0x00001128       0x88 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+                0x00001128                RTC_GetValue
+ .text.RTC_SetMaskedValue
+                0x000011b0      0x114 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+                0x000011b0                RTC_SetMaskedValue
  .text.RTC_SetValue
-                0x00001070       0xc0 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
-                0x00001070                RTC_SetValue
- .text.init_ui  0x00001130       0x14 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
-                0x00001130                init_ui
+                0x000012c4       0xc0 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+                0x000012c4                RTC_SetValue
+ .text.init_ui  0x00001384       0x14 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
+                0x00001384                init_ui
  .text.NVIC_SetPriority
-                0x00001144       0x54 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+                0x00001398       0x54 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
  .text.SysTick_Config
-                0x00001198       0x44 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+                0x000013ec       0x44 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
  .text.init_wait
-                0x000011dc       0x5c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
-                0x000011dc                init_wait
- .text.wait_ms  0x00001238       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
-                0x00001238                wait_ms
+                0x00001430       0x5c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+                0x00001430                init_wait
+ .text.wait_ms  0x0000148c       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+                0x0000148c                wait_ms
  .text.wait_elapsed
-                0x00001264       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
-                0x00001264                wait_elapsed
+                0x000014b8       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+                0x000014b8                wait_elapsed
  .text.wait_ChronoUs
-                0x00001290       0x42 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
-                0x00001290                wait_ChronoUs
- *fill*         0x000012d2        0x2 ff
+                0x000014e4       0x42 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+                0x000014e4                wait_ChronoUs
+ *fill*         0x00001526        0x2 ff
  .text.SysTick_Handler
-                0x000012d4       0x1c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
-                0x000012d4                SysTick_Handler
- .text.__main   0x000012f0        0xe c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(_cr__main.o)
-                0x000012f0                __CR_SEMIHOST
-                0x000012f0                __main
+                0x00001528       0x1c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+                0x00001528                SysTick_Handler
+ .text.__main   0x00001544        0xe c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(_cr__main.o)
+                0x00001544                __CR_SEMIHOST
+                0x00001544                __main
  .text.fp_round
-                0x000012fe       0x4c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
+                0x00001552       0x4c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
  .text.pr_dec.constprop.1
-                0x0000134a       0x26 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
- .text.sprintf  0x00001370       0x6c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
-                0x00001370                sprintf
- *fill*         0x000013dc        0x4 ff
+                0x0000159e       0x26 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
+ .text.sprintf  0x000015c4       0x6c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
+                0x000015c4                sprintf
  .text.fp_display
-                0x000013e0      0x948 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
- .text._initio  0x00001d28       0x78 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(initio.o)
-                0x00001d28                _initio
+                0x00001630      0x948 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
+ .text._initio  0x00001f78       0x78 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(initio.o)
+                0x00001f78                _initio
  .text.__vfprintf
-                0x00001da0      0xbd4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(printf.o)
-                0x00001da0                __vfprintf
- .text.setvbuf  0x00002974       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(setvbuf.o)
-                0x00002974                setvbuf
- .text.strlen   0x000029b4       0x4c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(strlen.o)
-                0x000029b4                strlen
+                0x00001ff0      0xbd4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(printf.o)
+                0x00001ff0                __vfprintf
+ .text.setvbuf  0x00002bc4       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(setvbuf.o)
+                0x00002bc4                setvbuf
+ .text.strlen   0x00002c04       0x4c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(strlen.o)
+                0x00002c04                strlen
  .text.localtime
-                0x00002a00       0xc0 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
-                0x00002a00                localtime
- .text.gmtime   0x00002ac0        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
-                0x00002ac0                gmtime
- .text.memset   0x00002ac4        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(memset.o)
-                0x00002ac4                memset
+                0x00002c50       0xc0 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
+                0x00002c50                localtime
+ .text.gmtime   0x00002d10        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
+                0x00002d10                gmtime
+ .text.memset   0x00002d14        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(memset.o)
+                0x00002d14                memset
  .text._deferredlazyseek
-                0x00002ac8       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_deferredlazyseek.o)
-                0x00002ac8                _deferredlazyseek
+                0x00002d18       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_deferredlazyseek.o)
+                0x00002d18                _deferredlazyseek
  .text.__flsbuf
-                0x00002b08      0x140 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_deferredlazyseek.o)
-                0x00002b08                __flsbuf
- .text._fdopen  0x00002c48       0x68 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_fdopen.o)
-                0x00002c48                _fdopen
- .text._fflush  0x00002cb0       0x52 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_fflush.o)
-                0x00002cb0                _fflush
- .text._frexpl  0x00002d02       0x56 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_frexpl.o)
-                0x00002d02                _frexpl
- .text._ldexpl  0x00002d58       0x48 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_ldexpl.o)
-                0x00002d58                _ldexpl
+                0x00002d58      0x140 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_deferredlazyseek.o)
+                0x00002d58                __flsbuf
+ .text._fdopen  0x00002e98       0x68 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_fdopen.o)
+                0x00002e98                _fdopen
+ .text._fflush  0x00002f00       0x52 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_fflush.o)
+                0x00002f00                _fflush
+ .text._frexpl  0x00002f52       0x56 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_frexpl.o)
+                0x00002f52                _frexpl
+ .text._ldexpl  0x00002fa8       0x48 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_ldexpl.o)
+                0x00002fa8                _ldexpl
  .text._Cwritebuf
-                0x00002da0       0x6c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_writebuf.o)
-                0x00002da0                _Cwritebuf
- .text.malloc   0x00002e0c       0xc8 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
-                0x00002e0c                malloc
- .text.free     0x00002ed4       0x30 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
-                0x00002ed4                free
+                0x00002ff0       0x6c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_writebuf.o)
+                0x00002ff0                _Cwritebuf
+ .text.malloc   0x0000305c       0xc8 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
+                0x0000305c                malloc
+ .text.free     0x00003124       0x30 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
+                0x00003124                free
  .text._Csys_alloc
-                0x00002f04       0x20 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
-                0x00002f04                _Csys_alloc
- .text.fclose   0x00002f24       0x58 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fclose.o)
-                0x00002f24                fclose
- .text.fflush   0x00002f7c       0x44 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fflush.o)
-                0x00002f7c                fflush
- .text.fseek    0x00002fc0      0x100 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fseek.o)
-                0x00002fc0                fseek
- .text.ftell    0x000030c0       0x48 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(ftell.o)
-                0x000030c0                ftell
- .text.remove   0x00003108       0x14 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(remove.o)
-                0x00003108                remove
- .text._sbrk    0x0000311c       0x3c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_cr_sbrk.o)
-                0x0000311c                _sbrk
+                0x00003154       0x20 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
+                0x00003154                _Csys_alloc
+ .text.fclose   0x00003174       0x58 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fclose.o)
+                0x00003174                fclose
+ .text.fflush   0x000031cc       0x44 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fflush.o)
+                0x000031cc                fflush
+ .text.fseek    0x00003210      0x100 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fseek.o)
+                0x00003210                fseek
+ .text.ftell    0x00003310       0x48 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(ftell.o)
+                0x00003310                ftell
+ .text.remove   0x00003358       0x14 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(remove.o)
+                0x00003358                remove
+ .text._sbrk    0x0000336c       0x3c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_cr_sbrk.o)
+                0x0000336c                _sbrk
  .text._do_fflush
-                0x00003158       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_do_fflush.o)
-                0x00003158                _do_fflush
+                0x000033a8       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_do_fflush.o)
+                0x000033a8                _do_fflush
  .text.__check_heap_overflow
-                0x00003198       0x18 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_cr_check_heap.o)
-                0x00003198                __check_heap_overflow
+                0x000033e8       0x18 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_cr_check_heap.o)
+                0x000033e8                __check_heap_overflow
  .text.__aeabi_dmul
-                0x000031b0      0x10c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x000031b0                __aeabi_dmul
+                0x00003400      0x10c c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x00003400                __aeabi_dmul
  .text.__aeabi_ddiv
-                0x000032bc      0x140 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x000032bc                __aeabi_ddiv
+                0x0000350c      0x140 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x0000350c                __aeabi_ddiv
  .text.__aeabi_dsub
-                0x000033fc      0x1a8 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x000033fc                __aeabi_dsub
+                0x0000364c      0x1a8 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x0000364c                __aeabi_dsub
  .text.__aeabi_dadd
-                0x000035a4      0x108 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x000035a4                __aeabi_dadd
+                0x000037f4      0x108 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x000037f4                __aeabi_dadd
  .text.__aeabi_d2iz
-                0x000036ac       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x000036ac                __aeabi_d2iz
+                0x000038fc       0x40 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x000038fc                __aeabi_d2iz
  .text.__bhs_ui2d
-                0x000036ec       0x46 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x000036ec                __bhs_ui2d
+                0x0000393c       0x46 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x0000393c                __bhs_ui2d
  .text.__aeabi_i2d
-                0x00003732       0x12 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x00003732                __aeabi_i2d
+                0x00003982       0x12 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x00003982                __aeabi_i2d
  .text.__aeabi_dcmpeq
-                0x00003744       0x2a c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x00003744                __aeabi_dcmpeq
+                0x00003994       0x2a c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x00003994                __aeabi_dcmpeq
  .text.__aeabi_dcmplt
-                0x0000376e       0x52 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x0000376e                __aeabi_dcmplt
+                0x000039be       0x52 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x000039be                __aeabi_dcmplt
  .text.__aeabi_dcmple
-                0x000037c0       0x52 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x000037c0                __aeabi_dcmple
+                0x00003a10       0x52 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x00003a10                __aeabi_dcmple
  .text.__aeabi_dcmpge
-                0x00003812       0x58 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
-                0x00003812                __aeabi_dcmpge
+                0x00003a62       0x58 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(double.o)
+                0x00003a62                __aeabi_dcmpge
  .text.__aeabi_memset_lowlevel
-                0x0000386a       0x32 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(memcpy.o)
-                0x0000386a                __aeabi_lowlevel_memset
+                0x00003aba       0x32 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7-m/nofp\libcr_eabihelpers.a(memcpy.o)
+                0x00003aba                __aeabi_lowlevel_memset
  .text.__sys_appexit
-                0x0000389c        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_appexit.o)
-                0x0000389c                __sys_appexit
-                0x0000389c                __exit
+                0x00003aec        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_appexit.o)
+                0x00003aec                __sys_appexit
+                0x00003aec                __exit
  .text.__sys_close
-                0x000038a8        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_close.o)
-                0x000038a8                __sys_close
+                0x00003af8        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_close.o)
+                0x00003af8                __sys_close
  .text.__sys_flen
-                0x000038b4        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_flen.o)
-                0x000038b4                __sys_flen
+                0x00003b04        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_flen.o)
+                0x00003b04                __sys_flen
  .text.__sys_istty
-                0x000038c0        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_istty.o)
-                0x000038c0                __sys_istty
+                0x00003b10        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_istty.o)
+                0x00003b10                __sys_istty
  .text.__sys_remove
-                0x000038cc        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_remove.o)
-                0x000038cc                __sys_remove
+                0x00003b1c        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_remove.o)
+                0x00003b1c                __sys_remove
  .text.__sys_seek
-                0x000038d8        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_seek.o)
-                0x000038d8                __sys_seek
+                0x00003b28        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_seek.o)
+                0x00003b28                __sys_seek
  .text.__sys_tmpnam
-                0x000038e4        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_tmpnam.o)
-                0x000038e4                __sys_tmpnam
+                0x00003b34        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_tmpnam.o)
+                0x00003b34                __sys_tmpnam
  .text.__sys_write
-                0x000038f0        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_write.o)
-                0x000038f0                __sys_write
+                0x00003b40        0xc c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_write.o)
+                0x00003b40                __sys_write
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.SEC_CHARACTER
-                0x000038fc        0x2 ./src/data_storage.o
-                0x000038fc                SEC_CHARACTER
- *fill*         0x000038fe        0x2 ff
+                0x00003b4c        0x2 ./src/data_storage.o
+                0x00003b4c                SEC_CHARACTER
+ *fill*         0x00003b4e        0x2 ff
  .rodata.MAX_TIMES
-                0x00003900        0x8 ./src/data_storage.o
-                0x00003900                MAX_TIMES
- .rodata        0x00003908       0x37 ./src/data_storage.o
- *fill*         0x0000393f        0x1 ff
- .rodata        0x00003940       0x28 ./src/menu_change_field.o
- .rodata        0x00003968        0xc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+                0x00003b50        0x8 ./src/data_storage.o
+                0x00003b50                MAX_TIMES
+ .rodata        0x00003b58       0x37 ./src/data_storage.o
+ *fill*         0x00003b8f        0x1 ff
+ .rodata        0x00003b90       0x28 ./src/view.o
+ .rodata        0x00003bb8        0xc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
  .rodata.fp_display.str1.1
-                0x00003974       0x34 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
+                0x00003bc4       0x34 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
                                  0x35 (size before relaxing)
  .rodata._initio.str1.1
-                0x000039a8        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(initio.o)
+                0x00003bf8        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(initio.o)
  .rodata.__vfprintf.str1.1
-                0x000039ac       0x31 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(printf.o)
+                0x00003bfc       0x31 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(printf.o)
                                  0x38 (size before relaxing)
- *fill*         0x000039dd        0x3 ff
+ *fill*         0x00003c2d        0x3 ff
  .rodata.monlen
-                0x000039e0       0x34 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
+                0x00003c30       0x34 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
  .rodata._Csys_alloc.str1.1
-                0x00003a14       0x18 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
+                0x00003c64       0x18 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
  .rodata.__num_Ciob_streams
-                0x00003a2c        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__ciob.o)
-                0x00003a2c                __num_Ciob_streams
-                0x00003a30                . = ALIGN (0x4)
+                0x00003c7c        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__ciob.o)
+                0x00003c7c                __num_Ciob_streams
+                0x00003c80                . = ALIGN (0x4)
 
-.glue_7         0x00003a30        0x0
- .glue_7        0x00003a30        0x0 linker stubs
+.glue_7         0x00003c80        0x0
+ .glue_7        0x00003c80        0x0 linker stubs
 
-.glue_7t        0x00003a30        0x0
- .glue_7t       0x00003a30        0x0 linker stubs
+.glue_7t        0x00003c80        0x0
+ .glue_7t       0x00003c80        0x0 linker stubs
 
-.vfp11_veneer   0x00003a30        0x0
- .vfp11_veneer  0x00003a30        0x0 linker stubs
+.vfp11_veneer   0x00003c80        0x0
+ .vfp11_veneer  0x00003c80        0x0 linker stubs
 
-.v4_bx          0x00003a30        0x0
- .v4_bx         0x00003a30        0x0 linker stubs
+.v4_bx          0x00003c80        0x0
+ .v4_bx         0x00003c80        0x0 linker stubs
 
-.iplt           0x00003a30        0x0
- .iplt          0x00003a30        0x0 ./src/cr_startup_lpc175x_6x.o
+.iplt           0x00003c80        0x0
+ .iplt          0x00003c80        0x0 ./src/cr_startup_lpc175x_6x.o
 
-.rel.dyn        0x00003a30        0x0
- .rel.iplt      0x00003a30        0x0 ./src/cr_startup_lpc175x_6x.o
+.rel.dyn        0x00003c80        0x0
+ .rel.iplt      0x00003c80        0x0 ./src/cr_startup_lpc175x_6x.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00003a30                __exidx_start = .
+                0x00003c80                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00003a30                __exidx_end = .
-                0x00003a30                _etext = .
+                0x00003c80                __exidx_end = .
+                0x00003c80                _etext = .
 
-.data_RAM2      0x2007c000        0x0 load address 0x00003a30
+.data_RAM2      0x2007c000        0x0 load address 0x00003c80
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM2 = .)
  *(.ramfunc.$RAM2)
@@ -1344,7 +1410,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000       0x24 load address 0x00003a30
+.data           0x10000000       0x58 load address 0x00003c80
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -1358,17 +1424,25 @@ END GROUP
                 0x10000000                TIME_PTRS
  .data.view     0x10000008        0xc ./src/menu_maintenance.o
                 0x10000008                view
- .data.change_field
-                0x10000014        0xc ./src/menu_maintenance.o
-                0x10000014                change_field
+ .data.mode     0x10000014       0x10 ./src/menu_maintenance.o
+                0x10000014                mode
+ .data.enter_funcs
+                0x10000024       0x10 ./src/menu_maintenance.o
+                0x10000024                enter_funcs
+ .data.up_down_func
+                0x10000034       0x14 ./src/menu_maintenance.o
+                0x10000034                up_down_func
+ .data.MAINTENANCE_CHANGE_TITLE
+                0x10000048        0xc ./src/view.o
+                0x10000048                MAINTENANCE_CHANGE_TITLE
  .data.SystemCoreClock
-                0x10000020        0x4 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
-                0x10000020                SystemCoreClock
-                0x10000024                . = ALIGN (0x4)
-                0x10000024                _edata = .
+                0x10000054        0x4 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                0x10000054                SystemCoreClock
+                0x10000058                . = ALIGN (0x4)
+                0x10000058                _edata = .
 
-.igot.plt       0x10000024        0x0 load address 0x00003a54
- .igot.plt      0x10000024        0x0 ./src/cr_startup_lpc175x_6x.o
+.igot.plt       0x10000058        0x0 load address 0x00003cd8
+ .igot.plt      0x10000058        0x0 ./src/cr_startup_lpc175x_6x.o
 
 .bss_RAM2       0x2007c000        0x0
                 0x2007c000                . = ALIGN (0x4)
@@ -1380,56 +1454,59 @@ END GROUP
                 0x2007c000                . = ALIGN ((. != 0x0)?0x4:0x1)
                 [!provide]                PROVIDE (__end_bss_RAM2 = .)
 
-.bss            0x10000024      0x270
-                0x10000024                . = ALIGN (0x4)
-                0x10000024                _bss = .
+.bss            0x10000058      0x280
+                0x10000058                . = ALIGN (0x4)
+                0x10000058                _bss = .
  *(.bss*)
- .bss.dateTime  0x10000024       0x24 ./src/data_storage.o
-                0x10000024                dateTime
- .bss.count     0x10000048        0x4 ./src/menu.o
-                0x10000048                count
+ .bss.dateTime  0x10000058       0x24 ./src/data_storage.o
+                0x10000058                dateTime
+ .bss.fieldToChange
+                0x1000007c        0x2 ./src/data_storage.o
+                0x1000007c                fieldToChange
+ *fill*         0x1000007e        0x2 
+ .bss.count     0x10000080        0x4 ./src/menu.o
+                0x10000080                count
  .bss.button_map
-                0x1000004c        0x4 ./src/menu.o
-                0x1000004c                button_map
- .bss.str       0x10000050       0x10 ./src/menu.o
-                0x10000050                str
- .bss.field     0x10000060        0x2 ./src/menu_change_field.o
-                0x10000060                field
- *fill*         0x10000062        0x2 
+                0x10000084        0x4 ./src/menu.o
+                0x10000084                button_map
+ .bss.count_10  0x10000088        0x4 ./src/menu_maintenance.o
+                0x10000088                count_10
  .bss.count_pressing_button
-                0x10000064        0x4 ./src/menu_change_field.o
-                0x10000064                count_pressing_button
- .bss.count_10  0x10000068        0x4 ./src/menu_maintenance.o
-                0x10000068                count_10
- .bss.idx       0x1000006c        0x4 ./src/menu_maintenance.o
-                0x1000006c                idx
+                0x1000008c        0x4 ./src/menu_maintenance.o
+                0x1000008c                count_pressing_button
+ .bss.view_idx  0x10000090        0x2 ./src/menu_maintenance.o
+                0x10000090                view_idx
+ .bss.mode_idx  0x10000092        0x2 ./src/menu_maintenance.o
+                0x10000092                mode_idx
+ .bss.str       0x10000094       0x20 ./src/view.o
+                0x10000094                str
  .bss.buttons_state
-                0x10000070        0x6 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
-                0x10000070                buttons_state
- .bss.row       0x10000076        0x2 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                0x10000076                row
- .bss.col       0x10000078        0x2 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                0x10000078                col
- *fill*         0x1000007a        0x2 
+                0x100000b4        0x6 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+                0x100000b4                buttons_state
+ .bss.row       0x100000ba        0x2 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x100000ba                row
+ .bss.col       0x100000bc        0x2 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x100000bc                col
+ *fill*         0x100000be        0x2 
  .bss.led_state
-                0x1000007c        0x4 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
-                0x1000007c                led_state
- .bss.__ms      0x10000080        0x4 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
-                0x10000080                __ms
+                0x100000c0        0x4 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+                0x100000c0                led_state
+ .bss.__ms      0x100000c4        0x4 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+                0x100000c4                __ms
  .bss._tms.4159
-                0x10000084       0x24 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
- .bss.errno     0x100000a8        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(errno.o)
-                0x100000a8                errno
+                0x100000c8       0x24 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
+ .bss.errno     0x100000ec        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(errno.o)
+                0x100000ec                errno
  .bss.__end_of_heap
-                0x100000ac        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(__init_alloc.o)
-                0x100000ac                __end_of_heap
- .bss.__heaps   0x100000b0        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(__init_alloc.o)
-                0x100000b0                __heaps
- .bss.__Ciob    0x100000b4      0x1e0 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__ciob.o)
-                0x100000b4                __Ciob
+                0x100000f0        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(__init_alloc.o)
+                0x100000f0                __end_of_heap
+ .bss.__heaps   0x100000f4        0x4 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(__init_alloc.o)
+                0x100000f4                __heaps
+ .bss.__Ciob    0x100000f8      0x1e0 c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__ciob.o)
+                0x100000f8                __Ciob
  *(COMMON)
-                0x10000294                . = ALIGN (0x4)
-                0x10000294                _ebss = .
+                0x100002d8                . = ALIGN (0x4)
+                0x100002d8                _ebss = .
                 [!provide]                PROVIDE (end = .)
 
 .noinit_RAM2    0x2007c000        0x0
@@ -1440,198 +1517,199 @@ END GROUP
  *(.noinit.$RamAHB32.*)
                 0x2007c000                . = ALIGN (0x4)
 
-.noinit         0x10000294        0x0
-                0x10000294                . = ALIGN (0x4)
-                0x10000294                _noinit = .
+.noinit         0x100002d8        0x0
+                0x100002d8                . = ALIGN (0x4)
+                0x100002d8                _noinit = .
  *(.noinit*)
-                0x10000294                . = ALIGN (0x4)
-                0x10000294                _end_noinit = .
-                0x10000294                PROVIDE (_pvHeapStart = DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x100002d8                . = ALIGN (0x4)
+                0x100002d8                _end_noinit = .
+                0x100002d8                PROVIDE (_pvHeapStart = DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x10008000                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
                 0xefff74de                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
                 0x00000000                _image_start = LOADADDR (.text)
-                0x00003a54                _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x00003a54                _image_size = (_image_end - _image_start)
+                0x00003cd8                _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x00003cd8                _image_size = (_image_end - _image_start)
 OUTPUT(project.axf elf32-littlearm)
 
-.debug_info     0x00000000     0x4299
+.debug_info     0x00000000     0x49f7
  .debug_info    0x00000000      0x276 ./src/cr_startup_lpc175x_6x.o
  .debug_info    0x00000276       0x40 ./src/crp.o
- .debug_info    0x000002b6      0x596 ./src/data_storage.o
- .debug_info    0x0000084c      0x2e1 ./src/menu.o
- .debug_info    0x00000b2d      0x377 ./src/menu_change_field.o
- .debug_info    0x00000ea4      0x2e2 ./src/menu_maintenance.o
- .debug_info    0x00001186      0x27f ./src/menu_normal.o
- .debug_info    0x00001405      0x283 ./src/project.o
- .debug_info    0x00001688      0x37d D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_info    0x00001a05      0x6b1 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
- .debug_info    0x000020b6      0x9dc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
- .debug_info    0x00002a92      0x43e D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
- .debug_info    0x00002ed0      0x20d D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
- .debug_info    0x000030dd      0x598 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
- .debug_info    0x00003675      0x20d D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
- .debug_info    0x00003882      0xa17 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+ .debug_info    0x000002b6      0x620 ./src/data_storage.o
+ .debug_info    0x000008d6      0x3f0 ./src/menu.o
+ .debug_info    0x00000cc6      0x57c ./src/menu_maintenance.o
+ .debug_info    0x00001242      0x37b ./src/menu_normal.o
+ .debug_info    0x000015bd      0x394 ./src/project.o
+ .debug_info    0x00001951      0x41d ./src/view.o
+ .debug_info    0x00001d6e      0x37d D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_info    0x000020eb      0x6b1 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+ .debug_info    0x0000279c      0x9dc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+ .debug_info    0x00003178      0x43e D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+ .debug_info    0x000035b6      0x20d D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
+ .debug_info    0x000037c3      0x610 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+ .debug_info    0x00003dd3      0x20d D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
+ .debug_info    0x00003fe0      0xa17 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
 
-.debug_abbrev   0x00000000     0x14a0
+.debug_abbrev   0x00000000     0x163d
  .debug_abbrev  0x00000000      0x12a ./src/cr_startup_lpc175x_6x.o
  .debug_abbrev  0x0000012a       0x38 ./src/crp.o
- .debug_abbrev  0x00000162      0x1ba ./src/data_storage.o
- .debug_abbrev  0x0000031c      0x12b ./src/menu.o
- .debug_abbrev  0x00000447      0x184 ./src/menu_change_field.o
- .debug_abbrev  0x000005cb      0x135 ./src/menu_maintenance.o
- .debug_abbrev  0x00000700      0x10f ./src/menu_normal.o
- .debug_abbrev  0x0000080f      0x102 ./src/project.o
- .debug_abbrev  0x00000911      0x11c D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_abbrev  0x00000a2d      0x1c1 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
- .debug_abbrev  0x00000bee      0x1cb D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
- .debug_abbrev  0x00000db9      0x13b D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
- .debug_abbrev  0x00000ef4       0xca D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
- .debug_abbrev  0x00000fbe      0x19c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
- .debug_abbrev  0x0000115a       0xcc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
- .debug_abbrev  0x00001226      0x27a D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+ .debug_abbrev  0x00000162      0x1c5 ./src/data_storage.o
+ .debug_abbrev  0x00000327      0x179 ./src/menu.o
+ .debug_abbrev  0x000004a0      0x1cc ./src/menu_maintenance.o
+ .debug_abbrev  0x0000066c      0x12d ./src/menu_normal.o
+ .debug_abbrev  0x00000799      0x13f ./src/project.o
+ .debug_abbrev  0x000008d8      0x1b8 ./src/view.o
+ .debug_abbrev  0x00000a90      0x11c D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_abbrev  0x00000bac      0x1c1 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+ .debug_abbrev  0x00000d6d      0x1cb D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+ .debug_abbrev  0x00000f38      0x13b D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+ .debug_abbrev  0x00001073       0xca D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
+ .debug_abbrev  0x0000113d      0x1ba D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+ .debug_abbrev  0x000012f7       0xcc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
+ .debug_abbrev  0x000013c3      0x27a D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
 
-.debug_aranges  0x00000000      0x3d0
+.debug_aranges  0x00000000      0x430
  .debug_aranges
                 0x00000000       0x80 ./src/cr_startup_lpc175x_6x.o
  .debug_aranges
                 0x00000080       0x18 ./src/crp.o
  .debug_aranges
-                0x00000098       0x80 ./src/data_storage.o
+                0x00000098       0x98 ./src/data_storage.o
  .debug_aranges
-                0x00000118       0x28 ./src/menu.o
+                0x00000130       0x28 ./src/menu.o
  .debug_aranges
-                0x00000140       0x48 ./src/menu_change_field.o
+                0x00000158       0x70 ./src/menu_maintenance.o
  .debug_aranges
-                0x00000188       0x20 ./src/menu_maintenance.o
+                0x000001c8       0x20 ./src/menu_normal.o
  .debug_aranges
-                0x000001a8       0x28 ./src/menu_normal.o
+                0x000001e8       0x20 ./src/project.o
  .debug_aranges
-                0x000001d0       0x20 ./src/project.o
+                0x00000208       0x40 ./src/view.o
  .debug_aranges
-                0x000001f0       0x28 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+                0x00000248       0x28 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
  .debug_aranges
-                0x00000218       0x40 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+                0x00000270       0x40 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
  .debug_aranges
-                0x00000258       0x68 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+                0x000002b0       0x68 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
  .debug_aranges
-                0x000002c0       0x38 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+                0x00000318       0x38 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
  .debug_aranges
-                0x000002f8       0x20 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
+                0x00000350       0x20 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
  .debug_aranges
-                0x00000318       0x40 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+                0x00000370       0x48 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
  .debug_aranges
-                0x00000358       0x20 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
+                0x000003b8       0x20 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
  .debug_aranges
-                0x00000378       0x58 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+                0x000003d8       0x58 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
 
-.debug_ranges   0x00000000      0x2c8
+.debug_ranges   0x00000000      0x328
  .debug_ranges  0x00000000       0x70 ./src/cr_startup_lpc175x_6x.o
- .debug_ranges  0x00000070       0x70 ./src/data_storage.o
- .debug_ranges  0x000000e0       0x18 ./src/menu.o
- .debug_ranges  0x000000f8       0x38 ./src/menu_change_field.o
- .debug_ranges  0x00000130       0x10 ./src/menu_maintenance.o
- .debug_ranges  0x00000140       0x18 ./src/menu_normal.o
- .debug_ranges  0x00000158       0x10 ./src/project.o
- .debug_ranges  0x00000168       0x18 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_ranges  0x00000180       0x30 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
- .debug_ranges  0x000001b0       0x58 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
- .debug_ranges  0x00000208       0x28 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
- .debug_ranges  0x00000230       0x10 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
- .debug_ranges  0x00000240       0x30 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
- .debug_ranges  0x00000270       0x10 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
- .debug_ranges  0x00000280       0x48 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+ .debug_ranges  0x00000070       0x88 ./src/data_storage.o
+ .debug_ranges  0x000000f8       0x18 ./src/menu.o
+ .debug_ranges  0x00000110       0x60 ./src/menu_maintenance.o
+ .debug_ranges  0x00000170       0x10 ./src/menu_normal.o
+ .debug_ranges  0x00000180       0x10 ./src/project.o
+ .debug_ranges  0x00000190       0x30 ./src/view.o
+ .debug_ranges  0x000001c0       0x18 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_ranges  0x000001d8       0x30 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+ .debug_ranges  0x00000208       0x58 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+ .debug_ranges  0x00000260       0x28 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+ .debug_ranges  0x00000288       0x10 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
+ .debug_ranges  0x00000298       0x38 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+ .debug_ranges  0x000002d0       0x10 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
+ .debug_ranges  0x000002e0       0x48 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
 
-.debug_macro    0x00000000     0x3bc1
+.debug_macro    0x00000000     0x3c9f
  .debug_macro   0x00000000       0x1d ./src/cr_startup_lpc175x_6x.o
  .debug_macro   0x0000001d       0x1a ./src/crp.o
  .debug_macro   0x00000037       0x34 ./src/crp.o
- .debug_macro   0x0000006b       0xea ./src/data_storage.o
- .debug_macro   0x00000155       0x10 ./src/data_storage.o
- .debug_macro   0x00000165       0xa0 ./src/data_storage.o
- .debug_macro   0x00000205       0x22 ./src/data_storage.o
- .debug_macro   0x00000227       0x10 ./src/data_storage.o
- .debug_macro   0x00000237       0x1c ./src/data_storage.o
- .debug_macro   0x00000253       0x3a ./src/data_storage.o
- .debug_macro   0x0000028d      0x5b3 ./src/data_storage.o
- .debug_macro   0x00000840       0x2d ./src/data_storage.o
- .debug_macro   0x0000086d      0xbb1 ./src/data_storage.o
- .debug_macro   0x0000141e      0x2c7 ./src/data_storage.o
- .debug_macro   0x000016e5       0xa0 ./src/data_storage.o
- .debug_macro   0x00001785      0x134 ./src/menu.o
- .debug_macro   0x000018b9       0x76 ./src/menu.o
- .debug_macro   0x0000192f       0x46 ./src/menu.o
- .debug_macro   0x00001975       0x1c ./src/menu.o
- .debug_macro   0x00001991       0x95 ./src/menu.o
- .debug_macro   0x00001a26       0x52 ./src/menu.o
- .debug_macro   0x00001a78       0x1c ./src/menu.o
- .debug_macro   0x00001a94      0x13e ./src/menu_change_field.o
- .debug_macro   0x00001bd2      0x148 ./src/menu_maintenance.o
- .debug_macro   0x00001d1a      0x144 ./src/menu_normal.o
- .debug_macro   0x00001e5e      0x126 ./src/project.o
- .debug_macro   0x00001f84      0x12d D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x000020b1      0xaa2 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x00002b53       0x87 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
- .debug_macro   0x00002bda      0xaa2 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
- .debug_macro   0x0000367c       0x70 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
- .debug_macro   0x000036ec       0xc8 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
- .debug_macro   0x000037b4       0x88 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
- .debug_macro   0x0000383c      0x117 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
- .debug_macro   0x00003953       0xac D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
- .debug_macro   0x000039ff       0x10 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
- .debug_macro   0x00003a0f       0xeb D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
- .debug_macro   0x00003afa       0x87 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
- .debug_macro   0x00003b81       0x40 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+ .debug_macro   0x0000006b       0xef ./src/data_storage.o
+ .debug_macro   0x0000015a       0x10 ./src/data_storage.o
+ .debug_macro   0x0000016a       0xa0 ./src/data_storage.o
+ .debug_macro   0x0000020a       0x22 ./src/data_storage.o
+ .debug_macro   0x0000022c       0x10 ./src/data_storage.o
+ .debug_macro   0x0000023c       0x1c ./src/data_storage.o
+ .debug_macro   0x00000258       0x3a ./src/data_storage.o
+ .debug_macro   0x00000292      0x5b3 ./src/data_storage.o
+ .debug_macro   0x00000845       0x2d ./src/data_storage.o
+ .debug_macro   0x00000872      0xbb1 ./src/data_storage.o
+ .debug_macro   0x00001423      0x2c7 ./src/data_storage.o
+ .debug_macro   0x000016ea       0xac ./src/data_storage.o
+ .debug_macro   0x00001796       0x10 ./src/data_storage.o
+ .debug_macro   0x000017a6      0x186 ./src/menu.o
+ .debug_macro   0x0000192c       0x76 ./src/menu.o
+ .debug_macro   0x000019a2       0x46 ./src/menu.o
+ .debug_macro   0x000019e8       0x1c ./src/menu.o
+ .debug_macro   0x00001a04       0x95 ./src/menu.o
+ .debug_macro   0x00001a99       0x52 ./src/menu.o
+ .debug_macro   0x00001aeb       0x16 ./src/menu.o
+ .debug_macro   0x00001b01      0x182 ./src/menu_maintenance.o
+ .debug_macro   0x00001c83      0x182 ./src/menu_normal.o
+ .debug_macro   0x00001e05      0x164 ./src/project.o
+ .debug_macro   0x00001f69       0xf9 ./src/view.o
+ .debug_macro   0x00002062      0x12d D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000218f      0xaa2 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x00002c31       0x87 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+ .debug_macro   0x00002cb8      0xaa2 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+ .debug_macro   0x0000375a       0x70 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+ .debug_macro   0x000037ca       0xc8 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+ .debug_macro   0x00003892       0x88 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+ .debug_macro   0x0000391a      0x117 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
+ .debug_macro   0x00003a31       0xac D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+ .debug_macro   0x00003add       0x10 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+ .debug_macro   0x00003aed       0xeb D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
+ .debug_macro   0x00003bd8       0x87 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+ .debug_macro   0x00003c5f       0x40 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
 
-.debug_line     0x00000000     0x32e0
+.debug_line     0x00000000     0x3475
  .debug_line    0x00000000      0x160 ./src/cr_startup_lpc175x_6x.o
  .debug_line    0x00000160       0xb1 ./src/crp.o
- .debug_line    0x00000211      0x42a ./src/data_storage.o
- .debug_line    0x0000063b      0x358 ./src/menu.o
- .debug_line    0x00000993      0x4be ./src/menu_change_field.o
- .debug_line    0x00000e51      0x417 ./src/menu_maintenance.o
- .debug_line    0x00001268      0x35d ./src/menu_normal.o
- .debug_line    0x000015c5      0x2e2 ./src/project.o
- .debug_line    0x000018a7      0x456 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_line    0x00001cfd      0x368 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
- .debug_line    0x00002065      0x3f2 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
- .debug_line    0x00002457      0x279 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
- .debug_line    0x000026d0      0x2aa D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
- .debug_line    0x0000297a      0x34e D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
- .debug_line    0x00002cc8      0x27d D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
- .debug_line    0x00002f45      0x39b D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+ .debug_line    0x00000211      0x479 ./src/data_storage.o
+ .debug_line    0x0000068a      0x389 ./src/menu.o
+ .debug_line    0x00000a13      0x593 ./src/menu_maintenance.o
+ .debug_line    0x00000fa6      0x357 ./src/menu_normal.o
+ .debug_line    0x000012fd      0x30c ./src/project.o
+ .debug_line    0x00001609      0x307 ./src/view.o
+ .debug_line    0x00001910      0x456 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_line    0x00001d66      0x368 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+ .debug_line    0x000020ce      0x402 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+ .debug_line    0x000024d0      0x279 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+ .debug_line    0x00002749      0x2aa D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
+ .debug_line    0x000029f3      0x46a D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+ .debug_line    0x00002e5d      0x27d D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
+ .debug_line    0x000030da      0x39b D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
 
-.debug_str      0x00000000     0xbe09
+.debug_str      0x00000000     0xbfde
  .debug_str     0x00000000     0x2f7c ./src/cr_startup_lpc175x_6x.o
                                0x2f8f (size before relaxing)
  .debug_str     0x00002f7c       0xe9 ./src/crp.o
                                0x2e9c (size before relaxing)
- .debug_str     0x00003065     0x7798 ./src/data_storage.o
-                               0xa5f0 (size before relaxing)
- .debug_str     0x0000a7fd      0x55f ./src/menu.o
-                               0xa919 (size before relaxing)
- .debug_str     0x0000ad5c       0xcd ./src/menu_change_field.o
-                               0xa9d3 (size before relaxing)
- .debug_str     0x0000ae29       0x3d ./src/menu_maintenance.o
-                               0xa951 (size before relaxing)
- .debug_str     0x0000ae66       0x32 ./src/menu_normal.o
-                               0xa942 (size before relaxing)
- .debug_str     0x0000ae98       0x23 ./src/project.o
-                               0xa8e7 (size before relaxing)
- .debug_str     0x0000aebb      0x552 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_str     0x00003065     0x7868 ./src/data_storage.o
+                               0xa6dd (size before relaxing)
+ .debug_str     0x0000a8cd      0x57d ./src/menu.o
+                               0xaafe (size before relaxing)
+ .debug_str     0x0000ae4a      0x16c ./src/menu_maintenance.o
+                               0xac46 (size before relaxing)
+ .debug_str     0x0000afb6       0x26 ./src/menu_normal.o
+                               0xaadf (size before relaxing)
+ .debug_str     0x0000afdc       0x23 ./src/project.o
+                               0xaa9c (size before relaxing)
+ .debug_str     0x0000afff       0xa7 ./src/view.o
+                               0xa631 (size before relaxing)
+ .debug_str     0x0000b0a6      0x552 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
                                0xa215 (size before relaxing)
- .debug_str     0x0000b40d      0x304 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+ .debug_str     0x0000b5f8      0x304 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
                                0xa278 (size before relaxing)
- .debug_str     0x0000b711      0x1b6 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+ .debug_str     0x0000b8fc      0x18d D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
                                0xa8e3 (size before relaxing)
- .debug_str     0x0000b8c7       0x3d D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+ .debug_str     0x0000ba89       0x3d D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
                                0x9f90 (size before relaxing)
- .debug_str     0x0000b904       0x26 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
-                               0xa87b (size before relaxing)
- .debug_str     0x0000b92a      0x187 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
-                               0xa2c1 (size before relaxing)
- .debug_str     0x0000bab1       0x14 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
+ .debug_str     0x0000bac6       0x26 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
+                               0xa8c6 (size before relaxing)
+ .debug_str     0x0000baec      0x19a D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+                               0xa37a (size before relaxing)
+ .debug_str     0x0000bc86       0x14 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
                                0xa669 (size before relaxing)
- .debug_str     0x0000bac5      0x344 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+ .debug_str     0x0000bc9a      0x344 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
                                0xa355 (size before relaxing)
 
 .comment        0x00000000       0x75
@@ -1640,10 +1718,10 @@ OUTPUT(project.axf elf32-littlearm)
  .comment       0x00000075       0x76 ./src/crp.o
  .comment       0x00000075       0x76 ./src/data_storage.o
  .comment       0x00000075       0x76 ./src/menu.o
- .comment       0x00000075       0x76 ./src/menu_change_field.o
  .comment       0x00000075       0x76 ./src/menu_maintenance.o
  .comment       0x00000075       0x76 ./src/menu_normal.o
  .comment       0x00000075       0x76 ./src/project.o
+ .comment       0x00000075       0x76 ./src/view.o
  .comment       0x00000075       0x76 D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
  .comment       0x00000075       0x76 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
  .comment       0x00000075       0x76 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
@@ -1691,13 +1769,13 @@ OUTPUT(project.axf elf32-littlearm)
  .ARM.attributes
                 0x0000008d       0x2d ./src/menu.o
  .ARM.attributes
-                0x000000ba       0x2d ./src/menu_change_field.o
+                0x000000ba       0x2d ./src/menu_maintenance.o
  .ARM.attributes
-                0x000000e7       0x2d ./src/menu_maintenance.o
+                0x000000e7       0x2d ./src/menu_normal.o
  .ARM.attributes
-                0x00000114       0x2d ./src/menu_normal.o
+                0x00000114       0x2d ./src/project.o
  .ARM.attributes
-                0x00000141       0x2d ./src/project.o
+                0x00000141       0x2d ./src/view.o
  .ARM.attributes
                 0x0000016e       0x2d D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
  .ARM.attributes
@@ -1787,22 +1865,22 @@ OUTPUT(project.axf elf32-littlearm)
  .ARM.attributes
                 0x00000879       0x1b c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(__sys_write.o)
 
-.debug_frame    0x00000000      0xa84
+.debug_frame    0x00000000      0xc0c
  .debug_frame   0x00000000      0x170 ./src/cr_startup_lpc175x_6x.o
- .debug_frame   0x00000170      0x1f4 ./src/data_storage.o
- .debug_frame   0x00000364       0x50 ./src/menu.o
- .debug_frame   0x000003b4       0xc0 ./src/menu_change_field.o
- .debug_frame   0x00000474       0x2c ./src/menu_maintenance.o
- .debug_frame   0x000004a0       0x48 ./src/menu_normal.o
- .debug_frame   0x000004e8       0x30 ./src/project.o
- .debug_frame   0x00000518       0x3c D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
- .debug_frame   0x00000554       0xc8 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
- .debug_frame   0x0000061c      0x180 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
- .debug_frame   0x0000079c       0x8c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
- .debug_frame   0x00000828       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
- .debug_frame   0x00000854       0xcc D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
- .debug_frame   0x00000920       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
- .debug_frame   0x0000094c      0x138 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
+ .debug_frame   0x00000170      0x25c ./src/data_storage.o
+ .debug_frame   0x000003cc       0x50 ./src/menu.o
+ .debug_frame   0x0000041c      0x15c ./src/menu_maintenance.o
+ .debug_frame   0x00000578       0x2c ./src/menu_normal.o
+ .debug_frame   0x000005a4       0x30 ./src/project.o
+ .debug_frame   0x000005d4       0xa4 ./src/view.o
+ .debug_frame   0x00000678       0x3c D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug\libCMSIS_CORE_LPC17xx.a(system_LPC17xx.o)
+ .debug_frame   0x000006b4       0xc8 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
+ .debug_frame   0x0000077c      0x180 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+ .debug_frame   0x000008fc       0x8c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
+ .debug_frame   0x00000988       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(peripherals.o)
+ .debug_frame   0x000009b4       0xf4 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+ .debug_frame   0x00000aa8       0x2c D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
+ .debug_frame   0x00000ad4      0x138 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
 
 Cross Reference Table
 
@@ -1812,7 +1890,6 @@ BOD_IRQHandler                                    ./src/cr_startup_lpc175x_6x.o
 BUTTON_GetButtonsEvents                           D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
                                                   ./src/menu_normal.o
                                                   ./src/menu_maintenance.o
-                                                  ./src/menu_change_field.o
                                                   ./src/menu.o
 BUTTON_Hit                                        D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
 BUTTON_Read                                       D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
@@ -1836,22 +1913,20 @@ I2S_IRQHandler                                    ./src/cr_startup_lpc175x_6x.o
 IntDefaultHandler                                 ./src/cr_startup_lpc175x_6x.o
 LCDText_Clear                                     D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
                                                   ./src/menu_maintenance.o
-                                                  ./src/menu_change_field.o
                                                   ./src/menu.o
 LCDText_Cursor                                    D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
                                                   ./src/menu_maintenance.o
-                                                  ./src/menu_change_field.o
 LCDText_Locate                                    D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                                                  ./src/menu_normal.o
-                                                  ./src/menu_change_field.o
+                                                  ./src/view.o
+                                                  ./src/menu_maintenance.o
 LCDText_PrintBinary                               D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
 LCDText_Printf                                    D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
 LCDText_Send_4bits                                D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
 LCDText_WriteChar                                 D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
 LCDText_WriteString                               D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-                                                  ./src/menu_normal.o
-                                                  ./src/menu_change_field.o
+                                                  ./src/view.o
 LCDText_Write_4bits                               D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
+MAINTENANCE_CHANGE_TITLE                          ./src/view.o
 MAX_TIMES                                         ./src/data_storage.o
 MCPWM_IRQHandler                                  ./src/cr_startup_lpc175x_6x.o
 MemManage_Handler                                 ./src/cr_startup_lpc175x_6x.o
@@ -1866,9 +1941,10 @@ RTC_GetSeconds                                    D:\Isel\19-20\Inverno\SE1\SE19
 RTC_GetValue                                      D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
                                                   ./src/data_storage.o
 RTC_IRQHandler                                    ./src/cr_startup_lpc175x_6x.o
+RTC_SetMaskedValue                                D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+                                                  ./src/data_storage.o
 RTC_SetSconds                                     D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
 RTC_SetValue                                      D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
-                                                  ./src/data_storage.o
 ResetISR                                          ./src/cr_startup_lpc175x_6x.o
 SEC_CHARACTER                                     ./src/data_storage.o
 SPI_IRQHandler                                    ./src/cr_startup_lpc175x_6x.o
@@ -2051,48 +2127,34 @@ _vsprintf                                         c:/nxp/mcuxpressoide_11.0.1_25
 asctime                                           c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
 backup_dateTime                                   ./src/data_storage.o
                                                   ./src/menu_maintenance.o
-                                                  ./src/menu_change_field.o
 bss_init                                          ./src/cr_startup_lpc175x_6x.o
 button_map                                        ./src/menu.o
                                                   ./src/menu_normal.o
                                                   ./src/menu_maintenance.o
-                                                  ./src/menu_change_field.o
 buttons_state                                     D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
 cal                                               ./src/calendar.o
 calloc                                            c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
-change_Time                                       ./src/data_storage.o
-                                                  ./src/menu_change_field.o
-change_date                                       ./src/menu_change_field.o
-                                                  ./src/menu_maintenance.o
-change_date_view                                  ./src/menu_change_field.o
-                                                  ./src/menu_maintenance.o
 change_day                                        ./src/data_storage.o
-change_field                                      ./src/menu_maintenance.o
 change_hour                                       ./src/data_storage.o
 change_min                                        ./src/data_storage.o
 change_month                                      ./src/data_storage.o
 change_sec                                        ./src/data_storage.o
-change_temperature_units                          ./src/menu_change_field.o
-                                                  ./src/menu_maintenance.o
-change_temperature_units_view                     ./src/menu_change_field.o
-                                                  ./src/menu_maintenance.o
-change_time                                       ./src/menu_change_field.o
-                                                  ./src/menu_maintenance.o
-change_time_view                                  ./src/menu_change_field.o
+change_time                                       ./src/data_storage.o
                                                   ./src/menu_maintenance.o
 change_year                                       ./src/data_storage.o
 col                                               D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
 count                                             ./src/menu.o
                                                   ./src/menu_normal.o
                                                   ./src/menu_maintenance.o
-                                                  ./src/menu_change_field.o
 count_10                                          ./src/menu_maintenance.o
-                                                  ./src/menu_change_field.o
-count_pressing_button                             ./src/menu_change_field.o
+count_pressing_button                             ./src/menu_maintenance.o
 ctime                                             c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
 data_init                                         ./src/cr_startup_lpc175x_6x.o
 dateTime                                          ./src/data_storage.o
+dateTimeToString                                  ./src/data_storage.o
+                                                  ./src/view.o
 difftime                                          c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
+enter_funcs                                       ./src/menu_maintenance.o
 errno                                             c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(errno.o)
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(_cr_sbrk.o)
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(ftell.o)
@@ -2102,7 +2164,8 @@ fclose                                            c:/nxp/mcuxpressoide_11.0.1_25
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(initio.o)
 fflush                                            c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fflush.o)
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fclose.o)
-field                                             ./src/menu_change_field.o
+fieldToChange                                     ./src/data_storage.o
+                                                  ./src/menu_maintenance.o
 fprintf                                           c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
 free                                              c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fclose.o)
@@ -2116,17 +2179,14 @@ ftell                                             c:/nxp/mcuxpressoide_11.0.1_25
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fseek.o)
 g_pfnVectors                                      ./src/cr_startup_lpc175x_6x.o
 get_Date                                          ./src/data_storage.o
-                                                  ./src/menu_change_field.o
+                                                  ./src/view.o
 get_Day                                           ./src/calendar.o
 get_Month                                         ./src/calendar.o
-get_RTC_dateTime                                  ./src/data_storage.o
-                                                  ./src/menu_normal.o
 get_Time                                          ./src/data_storage.o
-                                                  ./src/menu_change_field.o
+                                                  ./src/view.o
 get_Year                                          ./src/calendar.o
 gmtime                                            c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
                                                   D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
-idx                                               ./src/menu_maintenance.o
 init_BUTTON                                       D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(button.o)
                                                   D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(ui.o)
 init_LCDText                                      D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
@@ -2152,9 +2212,12 @@ led_state                                         D:\Isel\19-20\Inverno\SE1\SE19
 localtime                                         c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
 main                                              ./src/project.o
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_semihost.a(_cr__main.o)
+maintenance_buttons_interaction                   ./src/menu_maintenance.o
+maintenance_change_date                           ./src/menu_maintenance.o
+maintenance_change_temperature_units              ./src/menu_maintenance.o
+maintenance_change_time                           ./src/menu_maintenance.o
 maintenance_execution                             ./src/menu_maintenance.o
                                                   ./src/menu_normal.o
-                                                  ./src/menu_change_field.o
 malloc                                            c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(alloc.o)
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(printf.o)
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
@@ -2168,6 +2231,10 @@ memset                                            c:/nxp/mcuxpressoide_11.0.1_25
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
 mktime                                            c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
                                                   D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(rtc.o)
+mode                                              ./src/menu_maintenance.o
+mode_idx                                          ./src/menu_maintenance.o
+nextField                                         ./src/data_storage.o
+                                                  ./src/menu_maintenance.o
 normal_execution                                  ./src/menu_normal.o
                                                   ./src/menu_maintenance.o
                                                   ./src/menu.o
@@ -2178,9 +2245,14 @@ remove                                            c:/nxp/mcuxpressoide_11.0.1_25
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fclose.o)
 rename                                            c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(remove.o)
 row                                               D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
-s                                                 ./src/data_storage.o
+select_down_pressed                               ./src/menu_maintenance.o
+select_enter_pressed                              ./src/menu_maintenance.o
+select_field                                      ./src/menu_maintenance.o
+select_up_pressed                                 ./src/menu_maintenance.o
+send_date                                         ./src/data_storage.o
 send_dateTime                                     ./src/data_storage.o
-                                                  ./src/menu_change_field.o
+send_time                                         ./src/data_storage.o
+                                                  ./src/menu_maintenance.o
 set_Date                                          ./src/calendar.o
 set_Day                                           ./src/calendar.o
 set_Month                                         ./src/calendar.o
@@ -2190,14 +2262,14 @@ setvbuf                                           c:/nxp/mcuxpressoide_11.0.1_25
 snprintf                                          c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
 sprintf                                           c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
                                                   ./src/data_storage.o
-str                                               ./src/menu.o
-                                                  ./src/menu_normal.o
-                                                  ./src/menu_change_field.o
+str                                               ./src/view.o
 strlen                                            c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(strlen.o)
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(remove.o)
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(printf.o)
 strncpy                                           c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(strncpy.o)
                                                   c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(time.o)
+time_enter_pressed                                ./src/menu_maintenance.o
+time_up_down_pressed                              ./src/menu_maintenance.o
 turn_off_led                                      D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
                                                   ./src/menu_normal.o
                                                   ./src/menu_maintenance.o
@@ -2205,17 +2277,24 @@ turn_off_led                                      D:\Isel\19-20\Inverno\SE1\SE19
 turn_on_led                                       D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(led.o)
                                                   ./src/menu_normal.o
                                                   ./src/menu_maintenance.o
-                                                  ./src/menu_change_field.o
                                                   ./src/menu.o
 uitoa                                             c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(itoa.o)
 up_and_down_pressed                               ./src/menu.o
                                                   ./src/menu_normal.o
                                                   ./src/menu_maintenance.o
-                                                  ./src/menu_change_field.o
+up_down_func                                      ./src/menu_maintenance.o
 vfprintf                                          c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
 view                                              ./src/menu_maintenance.o
-view_normal                                       ./src/menu_normal.o
-                                                  ./src/menu.o
+view_change_date                                  ./src/view.o
+                                                  ./src/menu_maintenance.o
+view_change_temperature_units                     ./src/view.o
+                                                  ./src/menu_maintenance.o
+view_change_time                                  ./src/view.o
+                                                  ./src/menu_maintenance.o
+view_idx                                          ./src/menu_maintenance.o
+view_maintenance                                  ./src/view.o
+view_normal                                       ./src/view.o
+                                                  ./src/menu_normal.o
 vprintf                                           c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
 vsnprintf                                         c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
 vsprintf                                          c:/nxp/mcuxpressoide_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libcr_c.a(fpprintf.o)
@@ -2224,7 +2303,6 @@ wait_ChronoUs                                     D:\Isel\19-20\Inverno\SE1\SE19
                                                   D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(lcd.o)
 wait_elapsed                                      D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
                                                   ./src/menu_maintenance.o
-                                                  ./src/menu_change_field.o
                                                   ./src/menu.o
 wait_hz                                           D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)
 wait_ms                                           D:\Isel\19-20\Inverno\SE1\SE1920\Debug\libSE1920.a(wait.o)

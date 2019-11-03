@@ -48,7 +48,19 @@
 
 #define DOY_BITS 0xFFF
 
+enum RTC_FLAGS {
+		SEC_MASK=1,
+		MIN_MASK,
+		HOUR_MASK,
+		DOW_MASK,
+		DOM_MASK,
+		MONTH_MASK,
+		YEAR_MASK,
+		DOY_MASK
+};
 
+#define TIME_MASK HOUR_MASK | MIN_MASK
+#define DATE_MASK YEAR_MASK | MONTH_MASK | DOM_MASK
 
 
 
@@ -63,6 +75,8 @@
 void init_RTC(time_t seconds);
 
 void RTC_GetValue(struct tm *dateTime);
+
+void RTC_SetMaskedValue(struct tm *dateTime, short mask);
 
 void RTC_SetValue(struct tm *dateTime);
 
