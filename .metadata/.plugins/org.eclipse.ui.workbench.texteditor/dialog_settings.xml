@@ -2,12 +2,17 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="s" key="selection"/>
+		<item value="PCLKSEL0" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="PCLKSEL0"/>
+			<item value="PCLK_SPI"/>
+			<item value="LPC_SPI_TypeDef"/>
+			<item value="MSTR"/>
+			<item value="S0SPCR"/>
 			<item value="s"/>
 			<item value="idx"/>
 			<item value="ILR"/>
@@ -18,11 +23,6 @@
 			<item value="LPC_SC_TypeDef"/>
 			<item value="pclksel"/>
 			<item value="MCR"/>
-			<item value="MR0"/>
-			<item value="ctcr"/>
-			<item value="b_map"/>
-			<item value="count_10"/>
-			<item value="count_2"/>
 		</list>
 		<list key="replacehistory">
 			<item value="mode_idx"/>

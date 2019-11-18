@@ -50,6 +50,10 @@ void time_up_down_pressed(short value);
 
 void time_enter_pressed();
 
+void date_up_down_pressed(short value);
+
+void date_enter_pressed();
+
 void select_field();
 
 void maintenance_change_time();

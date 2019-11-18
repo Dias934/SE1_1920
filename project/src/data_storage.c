@@ -10,8 +10,14 @@
 struct tm dateTime;
 
 const char SEC_CHARACTER[2]={' ',':'};
-int* TIME_PTRS[2]={&(dateTime.tm_hour),&(dateTime.tm_min)};
-const int MAX_TIMES[2]={24,60};
+
+int* TIME_PTRS[TIME_FIELDS]={&(dateTime.tm_hour),&(dateTime.tm_min)};
+const int MAX_TIMES[TIME_FIELDS]={MAX_HOUR, MAX_MIN};
+
+int* DATE_PTRS[DATE_FIELDS]={&(dateTime.tm_year),&(dateTime.tm_mon),&(dateTime.tm_mday)};
+int MAX_DATES[DATE_FIELDS]={MAX_YEAR, MAX_MONTH, MAX_DAY};
+int DATE_OFFSETS[DATE_FIELDS]={YEAR_OFFSET, MONTH_OFFSET, DAY_OFFSET};
+
 short fieldToChange;
 
 void init_data_st(int units){
@@ -56,30 +62,16 @@ void change_time(int val){
 	(*TIME_PTRS[fieldToChange])=(*TIME_PTRS[fieldToChange])%MAX_TIMES[fieldToChange];
 }
 
+void change_date(int val){
+	(*DATE_PTRS[fieldToChange])+=val;
+	int max=MAX_DATES[fieldToChange];
+	if(fieldToChange==2)
+		max=MAX_DAYS_MAP[dateTime.tm_mon]+ (dateTime.tm_mon==FEBRUARY && ((dateTime.tm_year%4==0 && dateTime.tm_year%100!=0) || dateTime.tm_year%400==0)?1:0); //definir o valor máximo de dias.
+	if((*DATE_PTRS[fieldToChange])<DATE_OFFSETS[fieldToChange])
+		(*DATE_PTRS[fieldToChange])=max-1;
+	(*DATE_PTRS[fieldToChange])=(*DATE_PTRS[fieldToChange])%max+DATE_OFFSETS[fieldToChange];
+}
+
 int nextField(int type){
 	return type-(++fieldToChange);
-}
-
-void change_sec(int set){
-	dateTime.tm_sec+=set;
-}
-
-void change_min(int set){
-	dateTime.tm_min+=set;
-}
-
-void change_hour(int set){
-	dateTime.tm_hour+=set;
-}
-
-void change_day(int set){
-	dateTime.tm_mday+=set;
-}
-
-void change_month(int set){
-	dateTime.tm_mon+=set;
-}
-
-void change_year(int set){
-	dateTime.tm_year+=set;
 }

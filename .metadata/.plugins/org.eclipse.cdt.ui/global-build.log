@@ -1,40 +1,42 @@
-02:55:21 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+18:44:10 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
 make -r all 
 make: Nothing to be done for 'all'.
-02:55:21 **** Incremental Build of configuration Debug for project project ****
-make -r -j8 all 
-Building file: ../src/data_storage.c
+18:44:10 **** Incremental Build of configuration Debug for project SE1920 ****
+make -r all 
+Building file: ../src/BMP280.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -D__REDLIB__ -I"D:\Isel\19-20\Inverno\SE1\project\inc" -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/data_storage.d" -MT"src/data_storage.o" -MT"src/data_storage.d" -o "src/data_storage.o" "../src/data_storage.c"
-Finished building: ../src/data_storage.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/BMP280.d" -MT"src/BMP280.o" -MT"src/BMP280.d" -o "src/BMP280.o" "../src/BMP280.c"
+../src/BMP280.c:11:21: warning: pointer targets in initialization of 'short int *' from 'uint16_t *' {aka 'short unsigned int *'} differ in signedness [-Wpointer-sign]
+ short* calib_ptr[]={&(calib_data.dig_T1),&(calib_data.dig_T2),&(calib_data.dig_T3),&(calib_data.dig_P1),&(calib_data.dig_P2),&(calib_data.dig_P3),
+                     ^
+../src/BMP280.c:11:21: note: (near initialization for 'calib_ptr[0]')
+../src/BMP280.c:11:84: warning: pointer targets in initialization of 'short int *' from 'uint16_t *' {aka 'short unsigned int *'} differ in signedness [-Wpointer-sign]
+ short* calib_ptr[]={&(calib_data.dig_T1),&(calib_data.dig_T2),&(calib_data.dig_T3),&(calib_data.dig_P1),&(calib_data.dig_P2),&(calib_data.dig_P3),
+                                                                                    ^
+../src/BMP280.c:11:84: note: (near initialization for 'calib_ptr[3]')
+../src/BMP280.c: In function 'get_calib_data':
+../src/BMP280.c:24:41: warning: assignment to 'short int *' from 'short unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+    calib_ptr[(i-CALIB_DATA_ADDR_INIT)/2]=rx[1];
+                                         ^
+Finished building: ../src/BMP280.c
  
-Building target: project.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\Debug" -L"D:\Isel\19-20\Inverno\SE1\SE1920\Debug" -Xlinker -Map="project.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "project_Debug.ld" -o "project.axf"  ./src/calendar.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/data_storage.o ./src/menu.o ./src/menu_maintenance.o ./src/menu_normal.o ./src/project.o ./src/view.o   -lCMSIS_CORE_LPC17xx -lSE1920
-Memory region         Used Size  Region Size  %age Used
-       MFlash512:       15576 B       512 KB      2.97%
-        RamLoc32:         728 B        32 KB      2.22%
-        RamAHB32:          0 GB        32 KB      0.00%
-Finished building target: project.axf
+Building target: libSE1920.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libSE1920.a"  ./src/BMP280.o ./src/button.o ./src/lcd.o ./src/led.o ./src/peripherals.o ./src/rtc.o ./src/spi.o ./src/ui.o ./src/wait.o   
+arm-none-eabi-ar: creating libSE1920.a
+Finished building target: libSE1920.a
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "project.axf"; # arm-none-eabi-objcopy -v -O binary "project.axf" "project.bin" ; # checksum -p LPC1769 -d "project.bin";
+arm-none-eabi-size "libSE1920.a" ; # arm-none-eabi-objdump -h -S "libSE1920.a" >"libSE1920.lss"
    text	   data	    bss	    dec	    hex	filename
-  15488	     88	    640	  16216	   3f58	project.axf
+    516	     48	     32	    596	    254	BMP280.o (ex libSE1920.a)
+    390	      0	      6	    396	    18c	button.o (ex libSE1920.a)
+    872	      0	      4	    876	    36c	lcd.o (ex libSE1920.a)
+    120	      0	      4	    124	     7c	led.o (ex libSE1920.a)
+     26	      0	      0	     26	     1a	peripherals.o (ex libSE1920.a)
+    704	      0	      0	    704	    2c0	rtc.o (ex libSE1920.a)
+    448	      0	      0	    448	    1c0	spi.o (ex libSE1920.a)
+     20	      0	      0	     20	     14	ui.o (ex libSE1920.a)
+    518	      0	      4	    522	    20a	wait.o (ex libSE1920.a)
  
-02:55:25 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for 'all'.
-02:55:26 **** Incremental Build of configuration Debug for project project ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-02:55:40 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
-make -r all 
-make: Nothing to be done for 'all'.
-02:55:41 **** Incremental Build of configuration Debug for project project ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.
-02:55:41 **** Incremental Build of configuration Debug for project project ****
-make -r -j8 all 
-make: Nothing to be done for 'all'.

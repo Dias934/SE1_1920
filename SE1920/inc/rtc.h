@@ -33,8 +33,6 @@
 #define DOY_POSITION 0
 
 
-
-
 #define SEC_BITS 0x3F
 #define MIN_BITS 0x3F
 #define HOUR_BITS 0x1F
@@ -65,7 +63,14 @@ enum RTC_FLAGS {
 
 
 #define MAX_YEAR 4096
+#define MAX_MONTH 12
+#define MAX_DAY 31
+
+
 #define MAX_SEC 60
+#define MAX_MIN 60
+#define MAX_HOUR 24
+
 
 #define MONTH_ADJUSTMENT (+1) //LPC1769 [1-12] time.h [0-11]
 #define DOY_ADJUSTMENT (+1) //LPC1769 [1-365(366)] time.h [0-365]

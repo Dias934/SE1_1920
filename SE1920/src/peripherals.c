@@ -11,4 +11,5 @@ void init_peripherals(){
 	init_wait();
 	init_RTC(0);
 	init_ui();
+	init_spi();
 }

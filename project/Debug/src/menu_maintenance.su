@@ -6,6 +6,8 @@ menu_maintenance.c:80:6:select_enter_pressed	8	static
 menu_maintenance.c:87:6:select_field	8	static
 menu_maintenance.c:93:6:time_up_down_pressed	16	static
 menu_maintenance.c:103:6:time_enter_pressed	8	static
-menu_maintenance.c:115:6:maintenance_change_time	8	static
-menu_maintenance.c:120:6:maintenance_change_date	8	static
-menu_maintenance.c:125:6:maintenance_change_temperature_units	8	static
+menu_maintenance.c:115:6:date_up_down_pressed	16	static
+menu_maintenance.c:127:6:date_enter_pressed	8	static
+menu_maintenance.c:139:6:maintenance_change_time	8	static
+menu_maintenance.c:144:6:maintenance_change_date	8	static
+menu_maintenance.c:149:6:maintenance_change_temperature_units	8	static

@@ -16,7 +16,6 @@ src/menu_maintenance.o src/menu_maintenance.d: ../src/menu_maintenance.c \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/view.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/data_storage.h \
- D:\Isel\19-20\Inverno\SE1\project\inc/calendar.h \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/menu_normal.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/menu_maintenance.h
@@ -54,8 +53,6 @@ D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h:
 D:\Isel\19-20\Inverno\SE1\project\inc/view.h:
 
 D:\Isel\19-20\Inverno\SE1\project\inc/data_storage.h:
-
-D:\Isel\19-20\Inverno\SE1\project\inc/calendar.h:
 
 D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h:
 

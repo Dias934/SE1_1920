@@ -4,7 +4,6 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/calendar.c \
 ../src/cr_startup_lpc175x_6x.c \
 ../src/crp.c \
 ../src/data_storage.c \
@@ -15,7 +14,6 @@ C_SRCS += \
 ../src/view.c 
 
 OBJS += \
-./src/calendar.o \
 ./src/cr_startup_lpc175x_6x.o \
 ./src/crp.o \
 ./src/data_storage.o \
@@ -26,7 +24,6 @@ OBJS += \
 ./src/view.o 
 
 C_DEPS += \
-./src/calendar.d \
 ./src/cr_startup_lpc175x_6x.d \
 ./src/crp.d \
 ./src/data_storage.d \

@@ -15,7 +15,6 @@ src/project.o src/project.d: ../src/project.c \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/view.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/data_storage.h \
- D:\Isel\19-20\Inverno\SE1\project\inc/calendar.h \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h
 
 D:\Isel\19-20\Inverno\SE1\project\inc/menu.h:
@@ -49,7 +48,5 @@ D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h:
 D:\Isel\19-20\Inverno\SE1\project\inc/view.h:
 
 D:\Isel\19-20\Inverno\SE1\project\inc/data_storage.h:
-
-D:\Isel\19-20\Inverno\SE1\project\inc/calendar.h:
 
 D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h:

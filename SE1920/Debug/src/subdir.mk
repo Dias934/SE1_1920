@@ -4,29 +4,35 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/BMP280.c \
 ../src/button.c \
 ../src/lcd.c \
 ../src/led.c \
 ../src/peripherals.c \
 ../src/rtc.c \
+../src/spi.c \
 ../src/ui.c \
 ../src/wait.c 
 
 OBJS += \
+./src/BMP280.o \
 ./src/button.o \
 ./src/lcd.o \
 ./src/led.o \
 ./src/peripherals.o \
 ./src/rtc.o \
+./src/spi.o \
 ./src/ui.o \
 ./src/wait.o 
 
 C_DEPS += \
+./src/BMP280.d \
 ./src/button.d \
 ./src/lcd.d \
 ./src/led.d \
 ./src/peripherals.d \
 ./src/rtc.d \
+./src/spi.d \
 ./src/ui.d \
 ./src/wait.d 
 
