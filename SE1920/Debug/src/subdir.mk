@@ -6,6 +6,7 @@
 C_SRCS += \
 ../src/BMP280.c \
 ../src/button.c \
+../src/iap.c \
 ../src/lcd.c \
 ../src/led.c \
 ../src/peripherals.c \
@@ -17,6 +18,7 @@ C_SRCS += \
 OBJS += \
 ./src/BMP280.o \
 ./src/button.o \
+./src/iap.o \
 ./src/lcd.o \
 ./src/led.o \
 ./src/peripherals.o \
@@ -28,6 +30,7 @@ OBJS += \
 C_DEPS += \
 ./src/BMP280.d \
 ./src/button.d \
+./src/iap.d \
 ./src/lcd.d \
 ./src/led.d \
 ./src/peripherals.d \

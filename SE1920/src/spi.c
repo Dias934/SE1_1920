@@ -44,27 +44,13 @@ int SPI_ConfigTransfer(int frequency, int bitData, int mode){
 	return ret;
 }
 
-/*static int SPI_Send(unsigned short *txBuffer, unsigned short *rxBuffer){
-	short status=0;
-	LPC_SPI->SPDR=*txBuffer;
-	do{
-		status=((LPC_SPI->SPSR)>>3)&0x1F;
-	}while(status==0);
-	if(status==MODF)
-		LPC_SPI->SPCR |= 1<<5;
-	else if(status==WCOL)
-		LPC_SPI->SPDR;
-	else if(status==SPIF)
-		*rxBuffer=LPC_SPI->SPDR;
-	return status;
-}*/
-
 int SPI_Transfer(unsigned short *txBuffer, unsigned short *rxBuffer, int length){
 	short status=LPC_SPI->SPSR; //clear the status register. Optional but suggested by the manufacturer
 	status=SPIF;
 	for(int i=0; i<length && status==SPIF;i++){
 		status=0;  //clear the status of the previous transfer
 		LPC_SPI->SPDR=txBuffer[i];
+		unsigned short aux=txBuffer[i];
 		do{
 			status=((LPC_SPI->SPSR)>>3)&0x1F;
 		}while(status==0);
@@ -74,9 +60,6 @@ int SPI_Transfer(unsigned short *txBuffer, unsigned short *rxBuffer, int length)
 			LPC_SPI->SPDR;
 		else if(status==SPIF)
 			rxBuffer[i]=LPC_SPI->SPDR;
-		/*status=SPI_Send(&txBuffer[i],&rxBuffer[i]);
-		if(status==SPIF) //if there was no problem with the previous massage
-			status=SPI_Send(&txBuffer[i],&rxBuffer[i]);*/
 	}
 	return status;
 }

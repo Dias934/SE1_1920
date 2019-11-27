@@ -11,6 +11,7 @@
 #include "ui.h"
 #include "wait.h"
 #include "rtc.h"
+#include "spi.h"
 
 void init_peripherals();
 

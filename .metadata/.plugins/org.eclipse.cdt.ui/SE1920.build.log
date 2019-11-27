@@ -1,25 +1,21 @@
-18:44:10 **** Incremental Build of configuration Debug for project SE1920 ****
+19:57:10 **** Incremental Build of configuration Debug for project SE1920 ****
 make -r all 
 Building file: ../src/BMP280.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/BMP280.d" -MT"src/BMP280.o" -MT"src/BMP280.d" -o "src/BMP280.o" "../src/BMP280.c"
-../src/BMP280.c:11:21: warning: pointer targets in initialization of 'short int *' from 'uint16_t *' {aka 'short unsigned int *'} differ in signedness [-Wpointer-sign]
- short* calib_ptr[]={&(calib_data.dig_T1),&(calib_data.dig_T2),&(calib_data.dig_T3),&(calib_data.dig_P1),&(calib_data.dig_P2),&(calib_data.dig_P3),
-                     ^
-../src/BMP280.c:11:21: note: (near initialization for 'calib_ptr[0]')
-../src/BMP280.c:11:84: warning: pointer targets in initialization of 'short int *' from 'uint16_t *' {aka 'short unsigned int *'} differ in signedness [-Wpointer-sign]
- short* calib_ptr[]={&(calib_data.dig_T1),&(calib_data.dig_T2),&(calib_data.dig_T3),&(calib_data.dig_P1),&(calib_data.dig_P2),&(calib_data.dig_P3),
-                                                                                    ^
-../src/BMP280.c:11:84: note: (near initialization for 'calib_ptr[3]')
-../src/BMP280.c: In function 'get_calib_data':
-../src/BMP280.c:24:41: warning: assignment to 'short int *' from 'short unsigned int' makes pointer from integer without a cast [-Wint-conversion]
-    calib_ptr[(i-CALIB_DATA_ADDR_INIT)/2]=rx[1];
-                                         ^
+../src/BMP280.c:11:35: warning: pointer targets in initialization of 'short int *' from 'short unsigned int *' differ in signedness [-Wpointer-sign]
+ signed short* calib_signed_ptr[]={&(calib_data.dig_T1),&(calib_data.dig_T2),&(calib_data.dig_T3),&(calib_data.dig_P1),&(calib_data.dig_P2),&(calib_data.dig_P3),&(calib_data.dig_P4),
+                                   ^
+../src/BMP280.c:11:35: note: (near initialization for 'calib_signed_ptr[0]')
+../src/BMP280.c:11:98: warning: pointer targets in initialization of 'short int *' from 'short unsigned int *' differ in signedness [-Wpointer-sign]
+ signed short* calib_signed_ptr[]={&(calib_data.dig_T1),&(calib_data.dig_T2),&(calib_data.dig_T3),&(calib_data.dig_P1),&(calib_data.dig_P2),&(calib_data.dig_P3),&(calib_data.dig_P4),
+                                                                                                  ^
+../src/BMP280.c:11:98: note: (near initialization for 'calib_signed_ptr[3]')
 Finished building: ../src/BMP280.c
  
 Building target: libSE1920.a
 Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libSE1920.a"  ./src/BMP280.o ./src/button.o ./src/lcd.o ./src/led.o ./src/peripherals.o ./src/rtc.o ./src/spi.o ./src/ui.o ./src/wait.o   
+arm-none-eabi-ar -r  "libSE1920.a"  ./src/BMP280.o ./src/button.o ./src/iap.o ./src/lcd.o ./src/led.o ./src/peripherals.o ./src/rtc.o ./src/spi.o ./src/ui.o ./src/wait.o   
 arm-none-eabi-ar: creating libSE1920.a
 Finished building target: libSE1920.a
  
@@ -27,16 +23,17 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "libSE1920.a" ; # arm-none-eabi-objdump -h -S "libSE1920.a" >"libSE1920.lss"
    text	   data	    bss	    dec	    hex	filename
-    516	     48	     32	    596	    254	BMP280.o (ex libSE1920.a)
+   1848	     48	     40	   1936	    790	BMP280.o (ex libSE1920.a)
     390	      0	      6	    396	    18c	button.o (ex libSE1920.a)
+    710	      8	     40	    758	    2f6	iap.o (ex libSE1920.a)
     872	      0	      4	    876	    36c	lcd.o (ex libSE1920.a)
     120	      0	      4	    124	     7c	led.o (ex libSE1920.a)
      26	      0	      0	     26	     1a	peripherals.o (ex libSE1920.a)
     704	      0	      0	    704	    2c0	rtc.o (ex libSE1920.a)
-    448	      0	      0	    448	    1c0	spi.o (ex libSE1920.a)
+    460	      0	      0	    460	    1cc	spi.o (ex libSE1920.a)
      20	      0	      0	     20	     14	ui.o (ex libSE1920.a)
     518	      0	      4	    522	    20a	wait.o (ex libSE1920.a)
  
 
-18:44:11 Build Finished. 0 errors, 3 warnings. (took 840ms)
+19:57:12 Build Finished. 0 errors, 2 warnings. (took 1s.808ms)
 

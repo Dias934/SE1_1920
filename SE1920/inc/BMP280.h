@@ -24,10 +24,12 @@ enum RET_STATUS{
 	ERROR
 };
 
-
-
 #define SPI_FREQUENCY 10000000
 
+
+
+#define WR 0x7F
+#define RD 0xFF
 
 #define ID_ADDR 0xD0
 #define ID_VALUE 0x58
@@ -43,7 +45,7 @@ enum RET_STATUS{
 enum PWR_MODE{
 	SLEEP_MODE=0,
 	FORCED_MODE,
-	NORMAL_MODE
+	NORMAL_MODE=3
 };
 
 #define OSR_P_BIT 2
@@ -67,8 +69,12 @@ enum SPI3W_EN_VAL{
 };
 
 #define FILTER_BIT 2
-enum FILTER_VAL{
-	DEFAULT_FILTER=4
+enum FILTER_COEF_VAL{
+	FILTER_OFF=0,
+	FILTER_2,
+	FILTER_4=4,
+	FILTER_8,
+	FILTER_16
 };
 #define T_SB_BIT 5
 enum T_SB_VAL{
@@ -85,35 +91,36 @@ enum T_SB_VAL{
 #define PRESSURE_DATA_ADDR 0xF7
 #define TEMPERATURE_DATA_ADDR 0xFA
 
-#define CALIB_DATA_ADDR_INIT 0X89
-#define CALIB_DATA_ADDR_END 0XA0
+#define CALIB_DATA_ADDR_INIT 0X88
+#define CALIB_TEMP_ADDR_INIT 0x88
+#define CALIB_TEMP_ADDR_END 0x8D
+#define CALIB_PRESS_ADDR_INIT 0x8E
+#define CALIB_PRESS_ADDR_END 0x9F
+#define CALIB_DATA_ADDR_END 0X9F
 
 typedef struct{
-	uint16_t dig_T1;
-	int16_t dig_T2;
-	int16_t dig_T3;
-	uint16_t dig_P1;
-	int16_t dig_P2;
-	int16_t dig_P3;
-	int16_t dig_P4;
-	int16_t dig_P5;
-	int16_t dig_P6;
-	int16_t dig_P7;
-	int16_t dig_P8;
-	int16_t dig_P9;
+	unsigned short dig_T1;
+	short dig_T2;
+	short dig_T3;
+	unsigned short dig_P1;
+	short dig_P2;
+	short dig_P3;
+	short dig_P4;
+	short dig_P5;
+	short dig_P6;
+	short dig_P7;
+	short dig_P8;
+	short dig_P9;
 }bmp280_calib_data_Typedef;
 
 extern bmp280_calib_data_Typedef calib_data;
-extern uint32_t current_temp;
-extern uint32_t current_press;
+extern double current_temp;
+extern double current_press;
 
 void init_bmp280();
 
-int write_spi(unsigned short *tx, unsigned short *rx, int length);
+int get_chip_ID();
 
-int get_status();
-
-int set_default_use();
-
+int measure();
 
 #endif /* BMP280_H_ */

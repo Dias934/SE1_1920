@@ -14,26 +14,34 @@
 
 #include <cr_section_macros.h>
 #include "peripherals.h"
-#include "BMP280.h"
+#include "iap.h"
 #include "stdlib.h"
 
 // TODO: insert other include files here
 
 // TODO: insert other definitions and declarations here
 
+#define DST_LOCATION 0x00078023
+
+static unsigned int* dstAddr=(unsigned int*)DST_LOCATION;
+
 int main(void) {
+	int sector=29;
+	int value=0xA55A;
 	init_peripherals();
-	init_bmp280();
-	int x;
+	if(FLASH_BlankSectors(sector,sector)==SECTOR_NOT_BLANK)
+		value=*dstAddr;
+	//FLASH_EraseSectors(sector,sector);
 	while (1) {
 		LCDText_Locate(0,0);
-		measure();
-		//x=get_chip_ID();
-		LCDText_Printf("Temp:%.2f",current_temp);
+		LCDText_Printf("value:%d",value);
 		LCDText_Locate(1,0);
-		LCDText_Printf("Pres:%.2f",current_press);
-		wait_ms(500);
-
+		FLASH_WriteData(dstAddr, &value, 4);
+		LCDText_Printf("flash:%d",*dstAddr);
+		wait_ms(2000);
+		LCDText_Clear();
+		wait_ms(100);
+		value++;
 	}
 	return 0;
 }
