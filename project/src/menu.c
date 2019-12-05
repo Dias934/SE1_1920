@@ -13,10 +13,12 @@ int button_map;
 
 void *init_menu(){
 	init_peripherals();
+	init_bmp280();
+	init_data_st();
 	return &normal_execution;
 }
 
-void *up_and_down_pressed(void *origen(), void *destiny(), void *led_state()){
+void *up_and_down_pressed(void *origen(), void *destiny(), void (*led_state)()){
 	if(count==0)
 		count=wait_elapsed(count);
 	if((wait_elapsed(0)/PRESSING_TIME)%2>0)

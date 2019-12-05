@@ -24,16 +24,13 @@
 int main(void) {
 	init_peripherals();
 	init_bmp280();
-	int x;
 	while (1) {
 		LCDText_Locate(0,0);
 		measure();
-		//x=get_chip_ID();
 		LCDText_Printf("Temp:%.2f",current_temp);
 		LCDText_Locate(1,0);
 		LCDText_Printf("Pres:%.2f",current_press);
 		wait_ms(500);
-
 	}
 	return 0;
 }

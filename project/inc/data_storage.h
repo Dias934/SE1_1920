@@ -8,18 +8,16 @@
 #ifndef DATA_STORAGE_H_
 #define DATA_STORAGE_H_
 
-#include "stdarg.h"
 #include "stdio.h"
-#include "stdlib.h"
 #include "rtc.h"
-
-extern struct tm dateTime;
-extern short fieldToChange;
+#include "BMP280.h"
+#include "flash.h"
 
 #define TIME_FIELDS 2 //number of fields the user can change in the structure of time (HH:mm)
 #define DATE_FIELDS 3 //number of fields the user can change in the structure of date (DD/MM/YYYY)
+#define TEMP_FIELDS 0
 
-#define YEAR_OFFSET 70
+#define YEAR_OFFSET 0
 #define MONTH_OFFSET 0
 #define DAY_OFFSET 1
 
@@ -69,9 +67,14 @@ enum MONTH{
 	DECEMBER
 };
 
+enum TEMPERATURE_UNITS{
+	CELSIUS=0,
+	FAHRENHEIT
+};
 
 
-void init_data_st(int units);
+
+void init_data_st();
 
 void backup_dateTime();
 
@@ -79,14 +82,28 @@ void send_time();
 
 void send_date();
 
+void send_temp_unit();
+
 void send_dateTime(short mask);
 
 void dateTimeToString(char *str);
 
+void TemperatureAndPressureToString(char *str);
+
 void get_Time(char* str);
+
+void get_Temperature(char *str);
 
 void get_Date(char* str);
 
+void change_time(int val);
+
+void change_date(int val);
+
+void change_temp_unit(int val);
+
 int nextField(int type);
+
+int get_CurrentField();
 
 #endif /* DATA_STORAGE_H_ */

@@ -14,7 +14,6 @@
 }*/
 
 void * normal_execution(){
-	turn_off_led();
 	view_normal();
 	button_map=BUTTON_GetButtonsEvents();
 	if(((button_map&PRESSED)>0) && (((button_map>>DOWN_BUTTON_POSITION)&PRESSED)>0)) //checks if the up and down button are on the state pressed/pressing (the first bit is 1 if its pressed/pressing, check states)

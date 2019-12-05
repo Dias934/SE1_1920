@@ -13,9 +13,13 @@ src/menu.o src/menu.d: ../src/menu.c \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/wait.h \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/HD44780.h \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h \
+ D:\Isel\19-20\Inverno\SE1\SE1920\inc/spi.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/view.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/data_storage.h \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h \
+ D:\Isel\19-20\Inverno\SE1\SE1920\inc/BMP280.h \
+ D:\Isel\19-20\Inverno\SE1\SE1920\inc/flash.h \
+ D:\Isel\19-20\Inverno\SE1\SE1920\inc/iap.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/menu_normal.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/menu.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/menu_maintenance.h \
@@ -49,11 +53,19 @@ D:\Isel\19-20\Inverno\SE1\SE1920\inc/HD44780.h:
 
 D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h:
 
+D:\Isel\19-20\Inverno\SE1\SE1920\inc/spi.h:
+
 D:\Isel\19-20\Inverno\SE1\project\inc/view.h:
 
 D:\Isel\19-20\Inverno\SE1\project\inc/data_storage.h:
 
 D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h:
+
+D:\Isel\19-20\Inverno\SE1\SE1920\inc/BMP280.h:
+
+D:\Isel\19-20\Inverno\SE1\SE1920\inc/flash.h:
+
+D:\Isel\19-20\Inverno\SE1\SE1920\inc/iap.h:
 
 D:\Isel\19-20\Inverno\SE1\project\inc/menu_normal.h:
 

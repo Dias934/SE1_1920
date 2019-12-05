@@ -14,6 +14,8 @@
 extern uint32_t count;
 extern int button_map;
 
+#define ONE_SECOND 1000
+
 #define TWO_SECONDS 2000
 
 #define PRESSING_TIME 250
@@ -21,6 +23,6 @@ extern int button_map;
 
 void *init_menu();
 
-void *up_and_down_pressed(void *origen(), void *destiny(), void *led_state());
+void *up_and_down_pressed(void *origen(), void *destiny(), void (*led_state)());
 
 #endif /* MENU_H_ */

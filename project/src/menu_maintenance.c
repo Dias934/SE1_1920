@@ -6,16 +6,45 @@
  */
 #include "menu_maintenance.h"
 
+static void maintenance_buttons_interaction();
+
+static void select_up_pressed(short value);
+
+static void select_down_pressed(short value);
+
+static void select_enter_pressed();
+
+static void time_up_down_pressed(short value);
+
+static void time_enter_pressed();
+
+static void date_up_down_pressed(short value);
+
+static void date_enter_pressed();
+
+static void temp_up_down_pressed(short value);
+
+static void temp_enter_pressed();
+
+static void select_field();
+
+static void maintenance_change_time();
+
+static void maintenance_change_date();
+
+static void maintenance_change_temperature_units();
+
 uint32_t count_10;
 uint32_t count_pressing_button;
+uint32_t count_continuos_pressing;
 
 void (*view[3])()={view_change_time, view_change_date, view_change_temperature_units};
 
 void (*mode[4])()={select_field, maintenance_change_time, maintenance_change_date, maintenance_change_temperature_units};
 
-void (*enter_funcs[])()={select_enter_pressed, time_enter_pressed, date_enter_pressed, time_enter_pressed};
+void (*enter_funcs[])()={select_enter_pressed, time_enter_pressed, date_enter_pressed, temp_enter_pressed};
 
-void (*up_down_func[])(short value)={select_up_pressed, select_down_pressed, time_up_down_pressed, date_up_down_pressed, time_up_down_pressed};
+void (*up_down_func[])(short value)={select_up_pressed, select_down_pressed, time_up_down_pressed, date_up_down_pressed, temp_up_down_pressed};
 
 short view_idx=0;
 short mode_idx=0;
@@ -37,9 +66,10 @@ void * maintenance_execution(){
 	else
 		count_10=0;
 	if(((button_map&PRESSED)>0) && (((button_map>>DOWN_BUTTON_POSITION)&PRESSED)>0)){ //checks if the up and down button are on the state pressed/pressing
-		if(wait_elapsed(count)>=TWO_SECONDS)
+		if(count!=0 && wait_elapsed(count)>=TWO_SECONDS){
 			mode_idx=0;
-		LCDText_Cursor(CURSOR_OFF);
+			LCDText_Cursor(CURSOR_OFF);
+		}
 		return up_and_down_pressed(&maintenance_execution, &normal_execution, &turn_off_led);
 	}
 	else{
@@ -52,13 +82,22 @@ void * maintenance_execution(){
 
 void maintenance_buttons_interaction(){
 	if(((button_map>>ENTER_BUTTON_POSITION)&PRESSED)>0){
+		if(count_continuos_pressing==0)
+					count_continuos_pressing=wait_elapsed(count_continuos_pressing);
 		(*enter_funcs[mode_idx])();
 	}
-	if(((button_map&PRESSED)>0) && !(((button_map>>DOWN_BUTTON_POSITION)&PRESSED)>0)){
+	else if(((button_map&PRESSED)>0) && !(((button_map>>DOWN_BUTTON_POSITION)&PRESSED)>0)){
+		if(count_continuos_pressing==0)
+					count_continuos_pressing=wait_elapsed(count_continuos_pressing);
 		(*up_down_func[2*mode_idx-(  (view_idx*mode_idx/2)%2  )*view_idx])(1);
 	}
-	if(!((button_map&PRESSED)>0) && (((button_map>>DOWN_BUTTON_POSITION)&PRESSED)>0)){
+	else if(!((button_map&PRESSED)>0) && (((button_map>>DOWN_BUTTON_POSITION)&PRESSED)>0)){
+		if(count_continuos_pressing==0)
+					count_continuos_pressing=wait_elapsed(count_continuos_pressing);
 		(*up_down_func[2*mode_idx+1-mode_idx])(-1);
+	}
+	else{
+		count_continuos_pressing=0;
 	}
 }
 
@@ -94,14 +133,13 @@ void time_up_down_pressed(short value){
 	if(count_pressing_button==0)
 		count_pressing_button=wait_elapsed(count_pressing_button);
 	if(wait_elapsed(count_pressing_button)>150){
-		change_time(value);
+		change_time(value*(wait_elapsed(count_continuos_pressing)/ONE_SECOND+1));
 		count_pressing_button=0;
 		(*view[view_idx%3])();
 	}
 }
 
 void time_enter_pressed(){
-	(*view[view_idx%3])();
 	while(button_map!=NOT_PRESSED)
 		button_map=BUTTON_GetButtonsEvents();
 	if(nextField(TIME_FIELDS)==0){
@@ -110,22 +148,20 @@ void time_enter_pressed(){
 		LCDText_Cursor(CURSOR_OFF);
 		mode_idx=0;
 	}
+	(*view[view_idx%3])();
 }
 
 void date_up_down_pressed(short value){
 	if(count_pressing_button==0)
 		count_pressing_button=wait_elapsed(count_pressing_button);
 	if(wait_elapsed(count_pressing_button)>150){
-		change_date(value);
+		change_date(value*(wait_elapsed(count_continuos_pressing)/ONE_SECOND+1));
 		count_pressing_button=0;
-		LCDText_Cursor(CURSOR_OFF);
 		(*view[view_idx%3])();
-		LCDText_Cursor(CURSOR_ON);
 	}
 }
 
 void date_enter_pressed(){
-	(*view[view_idx%3])();
 	while(button_map!=NOT_PRESSED)
 		button_map=BUTTON_GetButtonsEvents();
 	if(nextField(DATE_FIELDS)==0){
@@ -134,19 +170,41 @@ void date_enter_pressed(){
 		LCDText_Cursor(CURSOR_OFF);
 		mode_idx=0;
 	}
+	(*view[view_idx%3])();
+}
+
+void temp_up_down_pressed(short value){
+	if(count_pressing_button==0)
+			count_pressing_button=wait_elapsed(count_pressing_button);
+	if(wait_elapsed(count_pressing_button)>150){
+		change_temp_unit(value);
+		count_pressing_button=0;
+		(*view[view_idx%3])();
+	}
+}
+
+void temp_enter_pressed(){
+	while(button_map!=NOT_PRESSED)
+		button_map=BUTTON_GetButtonsEvents();
+	send_temp_unit();
+	LCDText_Clear();
+	LCDText_Cursor(CURSOR_OFF);
+	mode_idx=0;
 }
 
 void maintenance_change_time(){
-	LCDText_Locate(1,fieldToChange*3+1);
+	LCDText_Locate(1,get_CurrentField()*3+1);
+	LCDText_Cursor(CURSOR_ON);
 	maintenance_buttons_interaction();
 }
 
 void maintenance_change_date(){
-	LCDText_Locate(1,9-fieldToChange*5+2*(fieldToChange/2));
+	LCDText_Locate(1,9-get_CurrentField()*5+2*(get_CurrentField()/2));
+	LCDText_Cursor(CURSOR_ON);
 	maintenance_buttons_interaction();
 }
 
 void maintenance_change_temperature_units(){
-	LCDText_Locate(1,fieldToChange*3+1);
+	LCDText_Locate(1,0);
 	maintenance_buttons_interaction();
 }

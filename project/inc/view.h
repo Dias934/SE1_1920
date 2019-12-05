@@ -9,8 +9,7 @@
 #define VIEW_H_
 
 #include "data_storage.h"
-
-extern char str[32];
+#include "lcd.h"
 
 void view_normal();
 

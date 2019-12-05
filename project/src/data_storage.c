@@ -9,7 +9,11 @@
 
 struct tm dateTime;
 
+double static celsius();
+double static celsius_to_fahrenheit();
+
 const char SEC_CHARACTER[2]={' ',':'};
+const char TEMPERATURE_UNIT[2]={'C','F'};
 
 int* TIME_PTRS[TIME_FIELDS]={&(dateTime.tm_hour),&(dateTime.tm_min)};
 const int MAX_TIMES[TIME_FIELDS]={MAX_HOUR, MAX_MIN};
@@ -18,11 +22,19 @@ int* DATE_PTRS[DATE_FIELDS]={&(dateTime.tm_year),&(dateTime.tm_mon),&(dateTime.t
 int MAX_DATES[DATE_FIELDS]={MAX_YEAR, MAX_MONTH, MAX_DAY};
 int DATE_OFFSETS[DATE_FIELDS]={YEAR_OFFSET, MONTH_OFFSET, DAY_OFFSET};
 
-short fieldToChange;
+double (*temperatureUnit[2])()={&celsius,&celsius_to_fahrenheit};
 
-void init_data_st(int units){
+static short fieldToChange;
+static unsigned int unit;
+static unsigned int aux;
+
+void init_data_st(){
 	fieldToChange=0;
 	RTC_GetValue(&dateTime);
+	readFromFlash(&unit);
+	if(unit>FAHRENHEIT)
+		unit=CELSIUS;
+	aux=unit;
 }
 
 void backup_dateTime(){
@@ -38,6 +50,12 @@ void send_date(){
 	send_dateTime(DATE_MASK);
 }
 
+void send_temp_unit(){
+	unit=aux;
+	writeToFlash(&unit,sizeof(unit));
+	fieldToChange=0;
+}
+
 void send_dateTime(short mask){
 	fieldToChange=0;
 	RTC_SetMaskedValue(&dateTime,mask);
@@ -46,6 +64,12 @@ void send_dateTime(short mask){
 void dateTimeToString(char *str){
 	RTC_GetValue(&dateTime);
 	sprintf(str,"%02d/%02d/%04d %02d%c%02d",dateTime.tm_mday,dateTime.tm_mon+1, dateTime.tm_year+1900, dateTime.tm_hour,SEC_CHARACTER[dateTime.tm_sec%2],dateTime.tm_min);
+}
+
+void TemperatureAndPressureToString(char *str){
+	aux=unit;
+	measure();
+	sprintf(str,"%3.2f%c %03.1fkPa ",(*temperatureUnit[unit])(),TEMPERATURE_UNIT[unit],current_press/1000.0);
 }
 
 void get_Time(char* str){
@@ -68,10 +92,36 @@ void change_date(int val){
 	if(fieldToChange==2)
 		max=MAX_DAYS_MAP[dateTime.tm_mon]+ (dateTime.tm_mon==FEBRUARY && ((dateTime.tm_year%4==0 && dateTime.tm_year%100!=0) || dateTime.tm_year%400==0)?1:0); //definir o valor máximo de dias.
 	if((*DATE_PTRS[fieldToChange])<DATE_OFFSETS[fieldToChange])
-		(*DATE_PTRS[fieldToChange])=max-1;
-	(*DATE_PTRS[fieldToChange])=(*DATE_PTRS[fieldToChange])%max+DATE_OFFSETS[fieldToChange];
+		(*DATE_PTRS[fieldToChange])=max;
+	(*DATE_PTRS[fieldToChange])=(*DATE_PTRS[fieldToChange])%(max+1);
+	if((*DATE_PTRS[fieldToChange])<DATE_OFFSETS[fieldToChange])
+		(*DATE_PTRS[fieldToChange])=DATE_OFFSETS[fieldToChange];
+}
+
+void change_temp_unit(int val){
+	aux+=val;
+	if(aux<0)
+		aux=FAHRENHEIT;
+	aux%=2;
 }
 
 int nextField(int type){
 	return type-(++fieldToChange);
+}
+
+int get_CurrentField(){
+	return fieldToChange;
+}
+
+double celsius(){
+	return current_temp;
+}
+
+double celsius_to_fahrenheit(){
+	return current_temp*(9.0/5.0)+32.0;
+}
+
+void get_Temperature(char *str){
+	measure();
+	sprintf(str,"%3.2f%c",(*temperatureUnit[aux])(),TEMPERATURE_UNIT[aux]);
 }
