@@ -75,18 +75,7 @@
  * @}
  */
 
-/** @defgroup WAIT_Public_Variables Wait Public Variables
- * @{
-*/
 
-/**
- * @brief	counts time
- * @note lowest resolution is 1ms
-*/
-extern uint32_t __ms;
-/**
- * @}
- */
 
 /** @defgroup WAIT_Public_Functions Wait Public Functions
  * @{

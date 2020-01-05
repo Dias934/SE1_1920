@@ -17,7 +17,6 @@ src/menu_maintenance.o src/menu_maintenance.d: ../src/menu_maintenance.c \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/spi.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/view.h \
  D:\Isel\19-20\Inverno\SE1\project\inc/data_storage.h \
- D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/BMP280.h \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/flash.h \
  D:\Isel\19-20\Inverno\SE1\SE1920\inc/iap.h \
@@ -59,8 +58,6 @@ D:\Isel\19-20\Inverno\SE1\SE1920\inc/spi.h:
 D:\Isel\19-20\Inverno\SE1\project\inc/view.h:
 
 D:\Isel\19-20\Inverno\SE1\project\inc/data_storage.h:
-
-D:\Isel\19-20\Inverno\SE1\SE1920\inc/rtc.h:
 
 D:\Isel\19-20\Inverno\SE1\SE1920\inc/BMP280.h:
 

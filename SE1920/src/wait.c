@@ -6,7 +6,7 @@
  */
 #include <wait.h>
 
-uint32_t __ms=0;
+static uint32_t __ms=0;
 
 void init_wait(void){
 	SysTick_Config(SystemCoreClock/MILLISECONDS_DIVISION);

@@ -9,7 +9,7 @@
 #define DATA_STORAGE_H_
 
 #include "stdio.h"
-#include "rtc.h"
+#include "peripherals.h"
 #include "BMP280.h"
 #include "flash.h"
 

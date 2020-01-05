@@ -9,10 +9,10 @@
 #include "string.h"
 
 static IAP iap=(IAP)IAP_LOCATION;
-unsigned int *sram_buffer=(unsigned int*)SRAM_LOCATION;
+static unsigned int *sram_buffer=(unsigned int*)SRAM_LOCATION;
 
-unsigned int cmd[5];
-unsigned int ret[5];
+static unsigned int cmd[5];
+static unsigned int ret[5];
 
 static unsigned int FLASH_PrepareForWrite(unsigned int startSector, unsigned int endSector){
 	cmd[0]=PREPARE_FOR_WRITE;

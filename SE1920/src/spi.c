@@ -9,7 +9,6 @@
 #include "spi.h"
 
 void init_spi(void){
-	//LPC_SPI->SPCCR=8;
 	LPC_PINCON->PINSEL0 |= SPI_FUNCTION<<PINSEL_SCK_BIT_POS;
 	LPC_PINCON->PINSEL1 |= SPI_FUNCTION<<PINSEL_MISO_BIT_POS | SPI_FUNCTION<<PINSEL_MOSI_BIT_POS;
 	LPC_SPI->SPCR |= MASTER_MODE<<MASTER_MODE_BIT_POSITION | BITS_MODE<<BIT_ENABLE_BIT_POSITION;
@@ -50,7 +49,6 @@ int SPI_Transfer(unsigned short *txBuffer, unsigned short *rxBuffer, int length)
 	for(int i=0; i<length && status==SPIF;i++){
 		status=0;  //clear the status of the previous transfer
 		LPC_SPI->SPDR=txBuffer[i];
-		unsigned short aux=txBuffer[i];
 		do{
 			status=((LPC_SPI->SPSR)>>3)&0x1F;
 		}while(status==0);

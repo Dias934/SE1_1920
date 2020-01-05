@@ -7,12 +7,6 @@
 
 #include "menu_normal.h"
 
-/*void view_normal(){
-	get_RTC_dateTime(str);
-	LCDText_Locate(0,0);
-	LCDText_WriteString(str);
-}*/
-
 void * normal_execution(){
 	view_normal();
 	button_map=BUTTON_GetButtonsEvents();

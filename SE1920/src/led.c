@@ -7,7 +7,7 @@
 
 #include <led.h>
 
-int led_state=0;
+static int led_state=0;
 
 void init_led(){
 	LPC_GPIO0->FIODIR|=(1<<LED_PIN);

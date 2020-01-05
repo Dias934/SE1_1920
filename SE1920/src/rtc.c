@@ -28,14 +28,22 @@ void RTC_GetValue(struct tm *dateTime){
 
 void RTC_SetMaskedValue(struct tm *dateTime, short mask){
 	LPC_RTC->CCR|=CLKEN_DISABLE;
-	if((mask & SEC_MASK)>0)LPC_RTC->SEC=(dateTime->tm_sec)%MAX_SEC;
-	if((mask & MIN_MASK)>0)LPC_RTC->MIN=dateTime->tm_min;
-	if((mask & HOUR_MASK)>0)LPC_RTC->HOUR=dateTime->tm_hour;
-	if((mask & DOM_MASK)>0)LPC_RTC->DOM=dateTime->tm_mday;
-	if((mask & DOW_MASK)>0)LPC_RTC->DOW=dateTime->tm_wday;
-	if((mask & DOY_MASK)>0)LPC_RTC->DOY=(dateTime->tm_yday)+MONTH_ADJUSTMENT;
-	if((mask & MONTH_MASK)>0)LPC_RTC->MONTH=(dateTime->tm_mon)+DOY_ADJUSTMENT;
-	if((mask & YEAR_MASK)>0)LPC_RTC->YEAR=(dateTime->tm_year)%MAX_YEAR;
+	if((mask & SEC_MASK)>0)
+		LPC_RTC->SEC=(dateTime->tm_sec)%MAX_SEC;
+	if((mask & MIN_MASK)>0)
+		LPC_RTC->MIN=dateTime->tm_min;
+	if((mask & HOUR_MASK)>0)
+		LPC_RTC->HOUR=dateTime->tm_hour;
+	if((mask & DOM_MASK)>0)
+		LPC_RTC->DOM=dateTime->tm_mday;
+	if((mask & DOW_MASK)>0)
+		LPC_RTC->DOW=dateTime->tm_wday;
+	if((mask & DOY_MASK)>0)
+		LPC_RTC->DOY=(dateTime->tm_yday)+MONTH_ADJUSTMENT;
+	if((mask & MONTH_MASK)>0)
+		LPC_RTC->MONTH=(dateTime->tm_mon)+DOY_ADJUSTMENT;
+	if((mask & YEAR_MASK)>0)
+		LPC_RTC->YEAR=(dateTime->tm_year)%MAX_YEAR;
 	LPC_RTC->CCR|=CLKEN_ENABLE;
 }
 

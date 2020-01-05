@@ -11,7 +11,7 @@
 #define BMP280_H_
 
 #ifdef __USE_CMSIS
-#include "spi.h"
+#include "peripherals.h"
 #include "LPC17xx.h"
 #endif
 
@@ -161,7 +161,7 @@ typedef struct{
  * @{
  */
 
-extern bmp280_calib_data_Typedef calib_data;
+
 extern double current_temp;
 extern double current_press;
 /**
