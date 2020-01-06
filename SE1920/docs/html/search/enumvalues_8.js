@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ten_5fdot_5ffont_246',['TEN_DOT_FONT',['../group__HD44780__Function__Set__Command.html#gga8aa072d241c501666383d067728287daa3dfa5c0adf08fa23db5b9339ef37250a',1,'HD44780.h']]],
-  ['two_5flines_247',['TWO_LINES',['../group__HD44780__Function__Set__Command.html#gga1cb181357a71d8468fa33af13c793963a8e80da1653ba6ab66362cdaa9b9d8068',1,'HD44780.h']]]
+  ['nine_5fbits_567',['NINE_BITS',['../spi_8h.html#af84fb91f73047dadd657ae4d87cdbc3fa7f56679ba4741f1494665c19a0529c3a',1,'spi.h']]],
+  ['normal_5fmode_568',['NORMAL_MODE',['../group__BMP280__Public__ENUMS.html#gga250049916a5f2cd49f5d32212a724fc2a83feb61d42f8db9f494019fcea2c0148',1,'BMP280.h']]]
 ];

@@ -1,7 +1,7 @@
 /*
 ===============================================================================
  Name        : project.c
- Author      : $(author)
+ Author      : $(Ricardo Romano, André Dias, Manuel Dias)
  Version     :
  Copyright   : $(copyright)
  Description : main definition

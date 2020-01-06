@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['send_5fdate_651',['send_date',['../group__Data__Storage__Public__Functions.html#ga5571c1ba78fdfb8d708278c9ccf2aa3f',1,'send_date():&#160;data_storage.c'],['../group__Data__Storage__Public__Functions.html#ga5571c1ba78fdfb8d708278c9ccf2aa3f',1,'send_date():&#160;data_storage.c']]],
+  ['send_5fdatetime_652',['send_dateTime',['../group__Data__Storage__Public__Functions.html#ga489852ca28e9da09f1d2552e560d97ef',1,'send_dateTime(short mask):&#160;data_storage.c'],['../group__Data__Storage__Public__Functions.html#ga489852ca28e9da09f1d2552e560d97ef',1,'send_dateTime(short mask):&#160;data_storage.c']]],
+  ['send_5ftemp_5funit_653',['send_temp_unit',['../group__Data__Storage__Public__Functions.html#gaada817d1dff4b4ccadf0c9491d6446ac',1,'send_temp_unit():&#160;data_storage.c'],['../group__Data__Storage__Public__Functions.html#gaada817d1dff4b4ccadf0c9491d6446ac',1,'send_temp_unit():&#160;data_storage.c']]],
+  ['send_5ftime_654',['send_time',['../group__Data__Storage__Public__Functions.html#gaa688550a541defe7494ea3c2200011ca',1,'send_time():&#160;data_storage.c'],['../group__Data__Storage__Public__Functions.html#gaa688550a541defe7494ea3c2200011ca',1,'send_time():&#160;data_storage.c']]],
+  ['spi_5fconfigtransfer_655',['SPI_ConfigTransfer',['../group__SPI__Public__Functions.html#ga0d3b827b6ffe26ee8383757617a61156',1,'SPI_ConfigTransfer(int frequency, int bitData, int mode):&#160;SPI.c'],['../group__SPI__Public__Functions.html#ga0d3b827b6ffe26ee8383757617a61156',1,'SPI_ConfigTransfer(int frequency, int bitData, int mode):&#160;SPI.c']]],
+  ['spi_5ftransfer_656',['SPI_Transfer',['../group__SPI__Public__Functions.html#ga46290174e86e83d368c8682b50b9c614',1,'SPI_Transfer(unsigned short *txBuffer, unsigned short *rxBuffer, int length):&#160;SPI.c'],['../group__SPI__Public__Functions.html#ga46290174e86e83d368c8682b50b9c614',1,'SPI_Transfer(unsigned short *txBuffer, unsigned short *rxBuffer, int length):&#160;SPI.c']]],
+  ['svc_5fhandler_657',['SVC_Handler',['../cr__startup__lpc175x__6x_8c.html#a553d3c6fbc0ff764fa70b866b5c79e3e',1,'cr_startup_lpc175x_6x.c']]],
+  ['systick_5fhandler_658',['SysTick_Handler',['../wait_8c.html#ab5e09814056d617c521549e542639b7e',1,'SysTick_Handler(void):&#160;wait.c'],['../cr__startup__lpc175x__6x_8c.html#ab80f32111a0725c9f4cdfb9d6c9b7f82',1,'SysTick_Handler(void):&#160;wait.c']]]
+];

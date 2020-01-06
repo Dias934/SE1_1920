@@ -1,10 +1,11 @@
-/*
- * view.c
- *
- *  Created on: 28/10/2019
- *      Author: A38866
- */
-
+/**
+* @file		view.c
+* @brief	Contains the View functions.
+* @version	1.1
+* @date		4 Out 2017
+* @author	Ricardo Romano, André Dias, Manuel Dias
+* @numbers  43924, 40619, 38866
+*/
 #include "view.h"
 
 

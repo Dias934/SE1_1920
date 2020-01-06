@@ -1,32 +1,98 @@
-/*
- * data_storage.c
- *
- *  Created on: 08/10/2019
- *      Author: A38866
- */
+/**
+* @file		data_storage.c
+* @brief	Contains the Data Storage interaction.
+* @version	1.1
+* @date		4 Out 2017
+* @author	Ricardo Romano, André Dias, Manuel Dias
+* @numbers  43924, 40619, 38866
+*/
 
 #include "data_storage.h"
 
 struct tm dateTime;
+/**
+ * @ingroup DATA_STORAGE_STATIC_FUNCTIONS
+ * @{
+ */
 
+/**
+ * @return return the value of the current Temperature in Celsius
+ */
 double static celsius();
+/**
+ * @brief transform Celsius into Fanhrenheit
+ * @return return the value in Fahrenheit
+ */
 double static celsius_to_fahrenheit();
-
+/**
+ *
+ * @}
+ *
+ * @ingroup DATA_STORAGE_STATIC_CONSTANTS
+ * @{
+ *
+ * @brief arry that represents the current second. ' ' even second, ':' odd second
+ */
 const char SEC_CHARACTER[2]={' ',':'};
+
+/**
+ * @brief arry that represents the temperature units
+ */
 const char TEMPERATURE_UNIT[2]={'C','F'};
 
+/**
+ * @brief arry that represents the pointers of time in time structure
+ */
 int* TIME_PTRS[TIME_FIELDS]={&(dateTime.tm_hour),&(dateTime.tm_min)};
+
+/**
+ * @brief arry that represents the maximum values of hour and minutes
+ */
 const int MAX_TIMES[TIME_FIELDS]={MAX_HOUR, MAX_MIN};
 
+/**
+ * @brief arry that represents the pointers of date in time structure
+ */
 int* DATE_PTRS[DATE_FIELDS]={&(dateTime.tm_year),&(dateTime.tm_mon),&(dateTime.tm_mday)};
+
+/**
+ * @brief arry that represents the maximum values of years, months and days
+ */
 int MAX_DATES[DATE_FIELDS]={MAX_YEAR, MAX_MONTH, MAX_DAY};
+
+/**
+ * @brief arry that represents the offset values of years, months and days
+ */
 int DATE_OFFSETS[DATE_FIELDS]={YEAR_OFFSET, MONTH_OFFSET, DAY_OFFSET};
 
+/**
+ * @brief array of function pointers to return the current temperature in UNIT index
+ */
 double (*temperatureUnit[2])()={&celsius,&celsius_to_fahrenheit};
+/**
+ * @}
+ */
 
+/**
+ * @ingroup DATA_STORAGE_STATIC_VARIABLES
+ * @{
+ * @brief index that represents the current field to change
+ */
 static short fieldToChange;
+/**
+ *
+ * @brief represents the unit of temperature
+ */
 static unsigned int unit;
+/**
+ *
+ * @brief auxiliar variable to save the unit of temperature
+ */
 static unsigned int aux;
+
+/**
+ * @}
+ */
 
 void init_data_st(){
 	fieldToChange=0;

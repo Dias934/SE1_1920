@@ -48,3 +48,12 @@ arm-none-eabi-size "project.axf"; # arm-none-eabi-objcopy -v -O binary "project.
    text	   data	    bss	    dec	    hex	filename
   20064	    192	    732	  20988	   51fc	project.axf
  
+01:11:08 **** Incremental Build of configuration Debug for project CMSIS_CORE_LPC17xx ****
+make -r all 
+make: Nothing to be done for 'all'.
+01:11:09 **** Incremental Build of configuration Debug for project SE1920 ****
+make -r all 
+Building file: ../src/BMP280.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -DCORE_M3 -D__USE_CMSIS=CMSIS_CORE_LPC17xx -D__LPC17XX__ -I"D:\Isel\19-20\Inverno\SE1\SE1920\inc" -I"D:\Isel\19-20\Inverno\SE1\CMSIS_CORE_LPC17xx\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/BMP280.d" -MT"src/BMP280.o" -MT"src/BMP280.d" -o "src/BMP280.o" "../src/BMP280.c"
+Command canceled

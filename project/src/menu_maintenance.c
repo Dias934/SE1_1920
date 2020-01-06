@@ -1,53 +1,139 @@
-/*
- * menu_maintenance.h
- *
- *  Created on: 09/10/2019
- *      Author: A38866
- */
+/**
+* @file		menu_maintenance.c
+* @brief	Contains the Menu Maintenance source.
+* @version	1.1
+* @date		4 Out 2017
+* @author	Ricardo Romano, André Dias, Manuel Dias
+* @numbers  43924, 40619, 38866
+*/
 #include "menu_maintenance.h"
 
+/**
+ * @ingroup MENU_MAINTENANCE_STATIC_FUNCTIONS
+ * @{
+ *
+ *@brief read the current button state and executes an action
+ */
 static void maintenance_buttons_interaction();
 
+/**
+ * @brief executes an action after only the up button is pressed while in select mode
+ */
 static void select_up_pressed(short value);
 
+/**
+ * @brief executes an action after only the down button is pressed while in select mode
+ */
 static void select_down_pressed(short value);
 
+/**
+ * @brief executes an action after only the enter button is pressed while in select mode
+ */
 static void select_enter_pressed();
 
+/**
+ * @brief executes an action after the up xor down button are pressed while in maintenance mode and time was selected
+ */
 static void time_up_down_pressed(short value);
 
+/**
+ * @brief executes an action after the enter button is pressed while in in maintenance mode and time was selected
+ */
 static void time_enter_pressed();
 
+/**
+ * @brief executes an action after the up xor down button is pressed while in in maintenance mode and date was selected
+ */
 static void date_up_down_pressed(short value);
 
+/**
+ * @brief executes an action after the enter button is pressed while in in maintenance mode and date was selected
+ */
 static void date_enter_pressed();
 
+/**
+ * @brief executes an action after the up xor down button is pressed while in in maintenance mode and temperature unit was selected
+ */
 static void temp_up_down_pressed(short value);
 
+/**
+ * @brief executes an action after the enter button is pressed while in in maintenance mode and temperature unit was selected
+ */
 static void temp_enter_pressed();
 
+/**
+ * @brief executes the select mode
+ */
 static void select_field();
 
+/**
+ * @brief executes the maintenance mode to change time
+ */
 static void maintenance_change_time();
 
+/**
+ * @brief executes the maintenance mode to change date
+ */
 static void maintenance_change_date();
 
+/**
+ * @brief executes the maintenance mode to change temperature unit
+ */
 static void maintenance_change_temperature_units();
 
-uint32_t count_10;
-uint32_t count_pressing_button;
-uint32_t count_continuos_pressing;
-
+/**
+ * @}
+ * @ingroup MENU_MAINTENANCE_STATIC_CONSTANTS
+ * @{
+ * @brief array of function pointers to select which view was selected
+ */
 void (*view[3])()={view_change_time, view_change_date, view_change_temperature_units};
 
+/**
+ * @brief array of function pointers to select which mode is to be called to execute maintenance
+ */
 void (*mode[4])()={select_field, maintenance_change_time, maintenance_change_date, maintenance_change_temperature_units};
 
+/**
+ * @brief array of function pointers to be called when enter button is pressed in the current mode
+ */
 void (*enter_funcs[])()={select_enter_pressed, time_enter_pressed, date_enter_pressed, temp_enter_pressed};
 
+/**
+ * @brief array of function pointers to be called when up xor button button is pressed in the current mode
+ */
 void (*up_down_func[])(short value)={select_up_pressed, select_down_pressed, time_up_down_pressed, date_up_down_pressed, temp_up_down_pressed};
 
+/**
+ * @}
+ * @ingroup MENU_MAINTENANCE_STATIC_VARIABLES
+ * @{
+ * @brief keep track of time passed up to 10 seconds if no button is pressed
+ */
+uint32_t count_10;
+
+/**
+ * @brief count how long is the button pressed to delay the execution of the command
+ */
+uint32_t count_pressing_button;
+
+/**
+ * @brief count how long is the button pressed to increased the incremented value of the fields
+ */
+uint32_t count_continuos_pressing;
+
+/**
+ * @brief the current view index
+ */
 short view_idx=0;
+
+/**
+ * @brief the current mode index
+ */
 short mode_idx=0;
+/**
+ * @}
+ */
 
 void * maintenance_execution(){
 	button_map=BUTTON_GetButtonsEvents();

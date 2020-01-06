@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['enter_5fbutton_5fmask_87',['ENTER_BUTTON_MASK',['../button_8h.html#a23774ee92fc675dc1520a3f82a6c5f5c',1,'button.h']]],
-  ['enter_5fbutton_5fpin_88',['ENTER_BUTTON_PIN',['../button_8h.html#ae9c9b6f84df57b4690b6787245c07a16',1,'button.h']]]
+  ['cpha_5fcpol_5fbit_5fmask_612',['CPHA_CPOL_BIT_MASK',['../spi_8h.html#a58915272d0a277f6589f617f721250fc',1,'spi.h']]],
+  ['cpha_5fcpol_5fbit_5fposition_613',['CPHA_CPOL_BIT_POSITION',['../spi_8h.html#a54671b599eff1127d9c542ded8c86f86',1,'spi.h']]],
+  ['custom_5fconfig_5ftransfer_614',['CUSTOM_CONFIG_TRANSFER',['../spi_8h.html#a62103811b1a829451075e377845141c7',1,'spi.h']]]
 ];

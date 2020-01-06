@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['hd44780_59',['HD44780',['../group__HD44780.html',1,'']]],
-  ['hd44780_2eh_60',['HD44780.h',['../HD44780_8h.html',1,'']]],
-  ['hd44780_20command_20instructions_61',['HD44780 Command Instructions',['../group__HD44780__Command__Instructions.html',1,'']]],
-  ['hd44780_20public_20constants_62',['HD44780 Public Constants',['../group__HD44780__Public__Constants.html',1,'']]]
+  ['get_5fchip_5fid_161',['get_chip_ID',['../group__BMP280__Public__FUNCTIONS.html#gaccb2730c3115a1f011cbed7535e11bda',1,'get_chip_ID():&#160;BMP280.c'],['../group__BMP280__Public__FUNCTIONS.html#gaccb2730c3115a1f011cbed7535e11bda',1,'get_chip_ID():&#160;BMP280.c']]],
+  ['gmt_5fplus_5fone_162',['GMT_PLUS_ONE',['../group__RTC__Public__DATE__ADJUSTMENTS.html#gad361d4bd9333fe9856d9b9d846e1da2a',1,'rtc.h']]]
 ];
